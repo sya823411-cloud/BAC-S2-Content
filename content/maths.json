@@ -1,6 +1,8 @@
+
 {
-  "version": 1,
+  "version": 2,
   "subjectId": "MATHS",
+
   "lessons": [
     {
       "id": "remote_maths_001",
@@ -13,6 +15,7 @@
       "keyFormulas": [
         "La dérivée de x² est 2x.",
         "La dérivée de ax+b est a.",
+        "La dérivée d'une constante est 0.",
         "Si f'(x) > 0, f est croissante.",
         "Si f'(x) < 0, f est décroissante."
       ],
@@ -21,8 +24,50 @@
         "Calculer correctement f'(x).",
         "Étudier le signe de f'(x) avant de conclure sur les variations."
       ]
+    },
+
+    {
+      "id": "remote_maths_002",
+      "subjectId": "MATHS",
+      "title": "Domaine de définition",
+      "chapter": "Fonctions numériques",
+      "durationMinutes": 20,
+      "summary": "Déterminer l'ensemble des valeurs de x pour lesquelles une fonction est définie.",
+      "content": "Le domaine de définition d'une fonction est l'ensemble des nombres réels pour lesquels l'expression de la fonction a un sens. Pour une fraction, le dénominateur doit être différent de zéro. Pour une racine carrée, le contenu de la racine doit être supérieur ou égal à zéro.",
+      "keyFormulas": [
+        "Pour 1/g(x), il faut g(x) ≠ 0.",
+        "Pour √g(x), il faut g(x) ≥ 0.",
+        "Pour une expression polynomiale, le domaine est généralement R."
+      ],
+      "tips": [
+        "Repérer les dénominateurs.",
+        "Repérer les racines carrées.",
+        "Résoudre toutes les conditions avant d'écrire le domaine."
+      ]
+    },
+
+    {
+      "id": "remote_maths_003",
+      "subjectId": "MATHS",
+      "title": "Les limites",
+      "chapter": "Limites et continuité",
+      "durationMinutes": 25,
+      "summary": "Comprendre la notion de limite et calculer les limites simples.",
+      "content": "La limite d'une fonction décrit le comportement de cette fonction lorsque x se rapproche d'une valeur ou lorsque x devient très grand. Pour calculer une limite, on commence souvent par remplacer x par la valeur recherchée lorsque cela est possible.",
+      "keyFormulas": [
+        "limite de x lorsque x tend vers +∞ = +∞.",
+        "limite de 1/x lorsque x tend vers +∞ = 0.",
+        "limite de 1/x lorsque x tend vers -∞ = 0.",
+        "La limite d'une constante est cette constante."
+      ],
+      "tips": [
+        "Identifier vers quelle valeur x tend.",
+        "Essayer d'abord le remplacement direct.",
+        "En cas de forme indéterminée, utiliser une méthode adaptée."
+      ]
     }
   ],
+
   "exercises": [
     {
       "id": "remote_maths_ex_001",
@@ -49,7 +94,64 @@
         "Calculer g'(x) = 2x - 4.",
         "Résoudre g'(x) = 0 : 2x - 4 = 0, donc x = 2.",
         "g'(x) est négatif avant 2 et positif après 2.",
-        "Donc g est décroissante sur ]-∞ ; 2] et croissante sur [2 ; +∞[."
+        "Donc g est décroissante sur ]-∞ ; 2] et croissante sur [2 ; +∞[.",
+        "g(2) = 4 - 8 - 5 = -9."
+      ]
+    },
+
+    {
+      "id": "remote_maths_ex_002",
+      "subjectId": "MATHS",
+      "title": "Déterminer un domaine de définition",
+      "chapter": "Domaine de définition",
+      "difficulty": "Facile",
+      "statement": "Déterminer le domaine de définition de f(x) = √(x - 2).",
+      "questions": [
+        {
+          "id": "remote_maths_q_002",
+          "question": "Quelle condition doit vérifier x ?",
+          "options": [
+            "x > 2",
+            "x ≥ 2",
+            "x ≤ 2",
+            "x ≠ 2"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pour qu'une racine carrée soit définie dans R, son contenu doit être supérieur ou égal à zéro."
+        }
+      ],
+      "solutionSteps": [
+        "On doit avoir x - 2 ≥ 0.",
+        "Donc x ≥ 2.",
+        "Le domaine de définition est Df = [2 ; +∞[."
+      ]
+    },
+
+    {
+      "id": "remote_maths_ex_003",
+      "subjectId": "MATHS",
+      "title": "Calcul d'une limite",
+      "chapter": "Limites",
+      "difficulty": "Facile",
+      "statement": "Calculer la limite de f(x) = 1/x lorsque x tend vers +∞.",
+      "questions": [
+        {
+          "id": "remote_maths_q_003",
+          "question": "Quelle est la limite de 1/x lorsque x tend vers +∞ ?",
+          "options": [
+            "+∞",
+            "-∞",
+            "0",
+            "1"
+          ],
+          "correctIndex": 2,
+          "explanation": "Lorsque x devient très grand, 1/x devient de plus en plus proche de zéro."
+        }
+      ],
+      "solutionSteps": [
+        "Lorsque x tend vers +∞, le dénominateur x devient très grand.",
+        "La fraction 1/x devient donc de plus en plus petite.",
+        "Ainsi, lim(x→+∞) 1/x = 0."
       ]
     }
   ]
