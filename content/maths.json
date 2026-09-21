@@ -1,1 +1,56 @@
-
+{
+  "version": 1,
+  "subjectId": "MATHS",
+  "lessons": [
+    {
+      "id": "remote_maths_001",
+      "subjectId": "MATHS",
+      "title": "Les dérivées",
+      "chapter": "Fonctions numériques",
+      "durationMinutes": 20,
+      "summary": "Comprendre la dérivée d'une fonction et son utilisation pour étudier les variations.",
+      "content": "La dérivée permet d'étudier les variations d'une fonction. Si f'(x) > 0 sur un intervalle, alors f est croissante sur cet intervalle. Si f'(x) < 0, alors f est décroissante.",
+      "keyFormulas": [
+        "La dérivée de x² est 2x.",
+        "La dérivée de ax+b est a.",
+        "Si f'(x) > 0, f est croissante.",
+        "Si f'(x) < 0, f est décroissante."
+      ],
+      "tips": [
+        "Commencer par déterminer l'ensemble de définition.",
+        "Calculer correctement f'(x).",
+        "Étudier le signe de f'(x) avant de conclure sur les variations."
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "remote_maths_ex_001",
+      "subjectId": "MATHS",
+      "title": "Étude d'une fonction",
+      "chapter": "Dérivation et variations",
+      "difficulty": "Facile",
+      "statement": "Soit g(x) = x² - 4x - 5. Étudier les variations de g.",
+      "questions": [
+        {
+          "id": "remote_maths_q_001",
+          "question": "Quelle est la dérivée de g(x) ?",
+          "options": [
+            "2x - 4",
+            "x - 4",
+            "2x + 4",
+            "x² - 4"
+          ],
+          "correctIndex": 0,
+          "explanation": "La dérivée de x² est 2x et celle de -4x est -4."
+        }
+      ],
+      "solutionSteps": [
+        "Calculer g'(x) = 2x - 4.",
+        "Résoudre g'(x) = 0 : 2x - 4 = 0, donc x = 2.",
+        "g'(x) est négatif avant 2 et positif après 2.",
+        "Donc g est décroissante sur ]-∞ ; 2] et croissante sur [2 ; +∞[."
+      ]
+    }
+  ]
+}
