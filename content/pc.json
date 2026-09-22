@@ -1,1 +1,117 @@
-
+{
+  "version": 1,
+  "subjectId": "PC",
+  "lessons": [
+    {
+      "id": "pc_meca_01",
+      "subjectId": "PC",
+      "title": "Cinématique du mouvement",
+      "chapter": "Mécanique",
+      "durationMinutes": 20,
+      "summary": "Étude du mouvement d'un mobile : position, vitesse et accélération.",
+      "content": "La cinématique étudie le mouvement d'un objet sans rechercher les causes de ce mouvement.\n\nLa position d'un mobile peut être représentée par ses coordonnées dans un repère.\n\nLa vitesse instantanée est la dérivée de la position par rapport au temps : v(t) = x'(t).\n\nL'accélération est la dérivée de la vitesse : a(t) = v'(t) = x''(t).",
+      "keyFormulas": [
+        "v(t) = x'(t)",
+        "a(t) = v'(t) = x''(t)"
+      ],
+      "tips": [
+        "Toujours préciser le référentiel utilisé.",
+        "Vérifier les unités : position en m, vitesse en m/s et accélération en m/s²."
+      ]
+    },
+    {
+      "id": "pc_dynamique_01",
+      "subjectId": "PC",
+      "title": "Deuxième loi de Newton",
+      "chapter": "Mécanique",
+      "durationMinutes": 25,
+      "summary": "Relation fondamentale entre les forces appliquées à un système et son accélération.",
+      "content": "Dans un référentiel galiléen, la deuxième loi de Newton s'écrit : somme des forces extérieures = m × a.\n\nIl faut commencer par identifier le système étudié, faire le bilan des forces puis appliquer la relation fondamentale de la dynamique.",
+      "keyFormulas": [
+        "ΣF = m × a",
+        "P = m × g"
+      ],
+      "tips": [
+        "Faire un schéma avant les calculs.",
+        "Ne pas oublier le poids lorsqu'il intervient."
+      ]
+    },
+    {
+      "id": "pc_electricite_01",
+      "subjectId": "PC",
+      "title": "Loi d'Ohm",
+      "chapter": "Électricité",
+      "durationMinutes": 15,
+      "summary": "Relation entre tension, intensité et résistance dans un conducteur ohmique.",
+      "content": "Pour un conducteur ohmique de résistance R, la tension U aux bornes du conducteur est proportionnelle à l'intensité I du courant.\n\nLa relation est U = R × I.",
+      "keyFormulas": [
+        "U = R × I",
+        "I = U / R",
+        "R = U / I"
+      ],
+      "tips": [
+        "U s'exprime en volts.",
+        "I s'exprime en ampères.",
+        "R s'exprime en ohms."
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pc_ex_01",
+      "subjectId": "PC",
+      "title": "Calcul d'une vitesse",
+      "chapter": "Cinématique",
+      "difficulty": "Facile",
+      "statement": "Un mobile parcourt une distance de 120 m en 10 s. Calculer sa vitesse moyenne.",
+      "questions": [
+        {
+          "id": "pc_ex_01_q1",
+          "question": "Quelle est la vitesse moyenne du mobile ?",
+          "options": [
+            "12 m/s",
+            "1200 m/s",
+            "0,083 m/s",
+            "130 m/s"
+          ],
+          "correctIndex": 0,
+          "explanation": "La vitesse moyenne est v = d/t = 120/10 = 12 m/s."
+        }
+      ],
+      "solutionSteps": [
+        "On utilise la relation v = d/t.",
+        "d = 120 m et t = 10 s.",
+        "v = 120/10 = 12 m/s.",
+        "La vitesse moyenne est donc 12 m/s."
+      ]
+    },
+    {
+      "id": "pc_ex_02",
+      "subjectId": "PC",
+      "title": "Application de la loi d'Ohm",
+      "chapter": "Électricité",
+      "difficulty": "Facile",
+      "statement": "Une résistance de 10 Ω est traversée par un courant de 2 A. Calculer la tension à ses bornes.",
+      "questions": [
+        {
+          "id": "pc_ex_02_q1",
+          "question": "Quelle est la tension aux bornes de la résistance ?",
+          "options": [
+            "5 V",
+            "12 V",
+            "20 V",
+            "0,2 V"
+          ],
+          "correctIndex": 2,
+          "explanation": "D'après la loi d'Ohm, U = R × I = 10 × 2 = 20 V."
+        }
+      ],
+      "solutionSteps": [
+        "On utilise U = R × I.",
+        "R = 10 Ω et I = 2 A.",
+        "U = 10 × 2 = 20 V.",
+        "La tension vaut donc 20 V."
+      ]
+    }
+  ]
+}
