@@ -1,157 +1,739 @@
-
 {
-  "version": 2,
+  "version": 3,
   "subjectId": "MATHS",
 
   "lessons": [
     {
-      "id": "remote_maths_001",
+      "id": "maths_fonctions_001",
       "subjectId": "MATHS",
-      "title": "Les dérivées",
+      "title": "Domaine de définition d'une fonction",
       "chapter": "Fonctions numériques",
-      "durationMinutes": 20,
-      "summary": "Comprendre la dérivée d'une fonction et son utilisation pour étudier les variations.",
-      "content": "La dérivée permet d'étudier les variations d'une fonction. Si f'(x) > 0 sur un intervalle, alors f est croissante sur cet intervalle. Si f'(x) < 0, alors f est décroissante.",
+      "durationMinutes": 45,
+      "summary": "Déterminer l'ensemble des valeurs réelles pour lesquelles une fonction est définie.",
+      "content": "1. DÉFINITION\n\nLe domaine de définition, noté Df, d'une fonction f est l'ensemble des nombres réels x pour lesquels l'expression f(x) a un sens.\n\n2. CAS D'UNE EXPRESSION POLYNOMIALE\n\nUne fonction polynomiale est définie sur R. Par exemple, f(x) = 2x² - 3x + 1 est définie pour tout réel x.\n\n3. CAS D'UNE FRACTION\n\nSi f(x) = A(x)/B(x), il faut obligatoirement avoir B(x) ≠ 0. On cherche donc les valeurs qui annulent le dénominateur et on les exclut.\n\nExemple : f(x) = (x+1)/(x-3). On doit avoir x-3 ≠ 0, donc x ≠ 3. Ainsi Df = R privé de {3}.\n\n4. CAS D'UNE RACINE CARRÉE\n\nPour une expression √A(x), il faut A(x) ≥ 0.\n\nExemple : f(x) = √(2x-4). On résout 2x-4 ≥ 0, donc x ≥ 2. Ainsi Df = [2 ; +∞[.\n\n5. CAS D'UNE RACINE AU DÉNOMINATEUR\n\nPour f(x) = 1/√A(x), il faut simultanément A(x) ≥ 0 et √A(x) ≠ 0. On obtient donc A(x) > 0.\n\n6. MÉTHODE\n\nÉtape 1 : repérer les fractions.\nÉtape 2 : repérer les racines carrées.\nÉtape 3 : écrire toutes les conditions.\nÉtape 4 : résoudre les conditions.\nÉtape 5 : faire l'intersection des solutions.\n\nLe domaine de définition constitue toujours une étape importante avant l'étude d'une fonction.",
       "keyFormulas": [
-        "La dérivée de x² est 2x.",
-        "La dérivée de ax+b est a.",
-        "La dérivée d'une constante est 0.",
-        "Si f'(x) > 0, f est croissante.",
-        "Si f'(x) < 0, f est décroissante."
+        "Polynôme : Df = R.",
+        "A(x)/B(x) : B(x) ≠ 0.",
+        "√A(x) : A(x) ≥ 0.",
+        "1/√A(x) : A(x) > 0."
       ],
       "tips": [
-        "Commencer par déterminer l'ensemble de définition.",
-        "Calculer correctement f'(x).",
-        "Étudier le signe de f'(x) avant de conclure sur les variations."
+        "Ne jamais oublier les valeurs qui annulent un dénominateur.",
+        "Sous une racine carrée réelle, le contenu doit être positif ou nul.",
+        "Pour plusieurs contraintes, prendre leur intersection."
       ]
     },
 
     {
-      "id": "remote_maths_002",
+      "id": "maths_limites_001",
       "subjectId": "MATHS",
-      "title": "Domaine de définition",
-      "chapter": "Fonctions numériques",
-      "durationMinutes": 20,
-      "summary": "Déterminer l'ensemble des valeurs de x pour lesquelles une fonction est définie.",
-      "content": "Le domaine de définition d'une fonction est l'ensemble des nombres réels pour lesquels l'expression de la fonction a un sens. Pour une fraction, le dénominateur doit être différent de zéro. Pour une racine carrée, le contenu de la racine doit être supérieur ou égal à zéro.",
-      "keyFormulas": [
-        "Pour 1/g(x), il faut g(x) ≠ 0.",
-        "Pour √g(x), il faut g(x) ≥ 0.",
-        "Pour une expression polynomiale, le domaine est généralement R."
-      ],
-      "tips": [
-        "Repérer les dénominateurs.",
-        "Repérer les racines carrées.",
-        "Résoudre toutes les conditions avant d'écrire le domaine."
-      ]
-    },
-
-    {
-      "id": "remote_maths_003",
-      "subjectId": "MATHS",
-      "title": "Les limites",
+      "title": "Notion de limite",
       "chapter": "Limites et continuité",
-      "durationMinutes": 25,
-      "summary": "Comprendre la notion de limite et calculer les limites simples.",
-      "content": "La limite d'une fonction décrit le comportement de cette fonction lorsque x se rapproche d'une valeur ou lorsque x devient très grand. Pour calculer une limite, on commence souvent par remplacer x par la valeur recherchée lorsque cela est possible.",
+      "durationMinutes": 50,
+      "summary": "Comprendre et calculer les limites d'une fonction en un point et à l'infini.",
+      "content": "1. IDÉE DE LA LIMITE\n\nLa limite de f(x) lorsque x se rapproche d'un nombre a décrit le comportement de f(x) lorsque x est très proche de a.\n\nOn écrit lim(x→a) f(x) = L lorsque les valeurs de f(x) se rapprochent de L quand x se rapproche de a.\n\n2. LIMITE À L'INFINI\n\nOn peut également étudier le comportement d'une fonction lorsque x devient très grand positivement ou négativement.\n\nPar exemple, lim(x→+∞) 1/x = 0.\n\n3. LIMITES USUELLES\n\nlim(x→+∞) x = +∞.\nlim(x→-∞) x = -∞.\nlim(x→±∞) 1/x = 0.\nlim(x→+∞) x² = +∞.\nlim(x→-∞) x² = +∞.\n\n4. CALCUL DIRECT\n\nLorsque la fonction est continue au point considéré, on peut souvent remplacer directement x par la valeur recherchée.\n\nExemple : lim(x→2)(x²+3x-1) = 4+6-1 = 9.\n\n5. FORMES INDÉTERMINÉES\n\nCertaines expressions ne permettent pas de conclure immédiatement. Les formes classiques sont notamment ∞/∞, 0/0, ∞-∞ et 0×∞.\n\nDans ce cas, il faut transformer l'expression : factorisation, mise au même dénominateur, quantité conjuguée, division par la plus grande puissance de x, etc.\n\n6. LIMITE D'UN QUOTIENT DE POLYNÔMES À L'INFINI\n\nPour un quotient de deux polynômes, on compare les degrés.\n\nSi le degré du numérateur est inférieur à celui du dénominateur, la limite est 0.\n\nSi les degrés sont égaux, la limite est le quotient des coefficients des termes de plus haut degré.\n\nSi le degré du numérateur est supérieur, la limite se comporte comme celle du quotient des termes dominants.",
       "keyFormulas": [
-        "limite de x lorsque x tend vers +∞ = +∞.",
-        "limite de 1/x lorsque x tend vers +∞ = 0.",
-        "limite de 1/x lorsque x tend vers -∞ = 0.",
-        "La limite d'une constante est cette constante."
+        "lim(x→+∞) 1/x = 0.",
+        "lim(x→-∞) 1/x = 0.",
+        "lim(x→+∞) x = +∞.",
+        "lim(x→-∞) x = -∞.",
+        "lim(x→±∞) x² = +∞."
       ],
       "tips": [
-        "Identifier vers quelle valeur x tend.",
-        "Essayer d'abord le remplacement direct.",
-        "En cas de forme indéterminée, utiliser une méthode adaptée."
+        "Toujours identifier le sens de variation de x.",
+        "Avant d'utiliser une méthode compliquée, essayer la substitution directe.",
+        "Pour un quotient de polynômes, comparer les degrés."
+      ]
+    },
+
+    {
+      "id": "maths_continuite_001",
+      "subjectId": "MATHS",
+      "title": "Continuité",
+      "chapter": "Limites et continuité",
+      "durationMinutes": 40,
+      "summary": "Comprendre la continuité et son utilisation pour l'existence de solutions.",
+      "content": "Une fonction f est continue en un réel a lorsqu'elle est définie au voisinage de a et lorsque lim(x→a)f(x) = f(a).\n\nLes fonctions polynomiales sont continues sur R. Les fonctions rationnelles sont continues sur tout intervalle où leur dénominateur ne s'annule pas.\n\nLe théorème des valeurs intermédiaires est particulièrement important. Si une fonction est continue sur un intervalle [a;b], alors elle prend toutes les valeurs comprises entre f(a) et f(b).\n\nAinsi, si f(a) et f(b) sont de signes contraires, il existe au moins un réel c appartenant à ]a;b[ tel que f(c)=0.\n\nExemple : soit f(x)=x³-x-1. Comme f est continue sur R, si f(1)<0 et f(2)>0, alors l'équation f(x)=0 possède au moins une solution dans ]1;2[.\n\nLa continuité permet donc de justifier l'existence d'une solution même lorsqu'on ne sait pas l'exprimer exactement.",
+      "keyFormulas": [
+        "f continue en a si lim(x→a)f(x) = f(a).",
+        "Une fonction polynomiale est continue sur R.",
+        "Une fonction rationnelle est continue là où son dénominateur est non nul."
+      ],
+      "tips": [
+        "Vérifier d'abord que la fonction est continue sur l'intervalle considéré.",
+        "Pour appliquer le théorème des valeurs intermédiaires, calculer les valeurs aux bornes.",
+        "Distinguer existence d'une solution et calcul exact de cette solution."
+      ]
+    },
+
+    {
+      "id": "maths_derivation_001",
+      "subjectId": "MATHS",
+      "title": "Dérivation d'une fonction",
+      "chapter": "Dérivation",
+      "durationMinutes": 55,
+      "summary": "Calculer la dérivée d'une fonction et utiliser les règles de dérivation.",
+      "content": "La dérivée d'une fonction permet notamment d'étudier ses variations et de déterminer les tangentes à sa courbe.\n\nPour une fonction f dérivable en a, f'(a) représente le coefficient directeur de la tangente à la courbe au point d'abscisse a.\n\nDérivées usuelles :\n\nLa dérivée d'une constante est 0.\nLa dérivée de x est 1.\nLa dérivée de x² est 2x.\nLa dérivée de x^n est n x^(n-1).\n\nRègles :\n\n(u+v)' = u' + v'.\n(ku)' = ku'.\n(uv)' = u'v + uv'.\n(u/v)' = (u'v-uv')/v², lorsque v est non nul.\n\nExemple : f(x)=x²-4x+3.\nAlors f'(x)=2x-4.\n\nLa dérivée doit toujours être calculée sur le domaine où la fonction est définie et dérivable.",
+      "keyFormulas": [
+        "(x^n)' = n x^(n-1).",
+        "(u+v)' = u'+v'.",
+        "(ku)' = ku'.",
+        "(uv)' = u'v+uv'.",
+        "(u/v)' = (u'v-uv')/v²."
+      ],
+      "tips": [
+        "Apprendre les dérivées usuelles.",
+        "Faire attention aux signes.",
+        "Écrire les étapes pour éviter les erreurs de calcul."
+      ]
+    },
+
+    {
+      "id": "maths_signe_derivative_001",
+      "subjectId": "MATHS",
+      "title": "Signe de la dérivée",
+      "chapter": "Dérivation et variations",
+      "durationMinutes": 45,
+      "summary": "Construire le signe d'une dérivée pour déterminer les variations d'une fonction.",
+      "content": "Le signe de f'(x) permet de connaître les variations de f.\n\nSi f'(x)>0 sur un intervalle, f est strictement croissante sur cet intervalle.\n\nSi f'(x)<0 sur un intervalle, f est strictement décroissante.\n\nSi f'(x)=0 en un point, ce point peut correspondre à un extremum, mais il faut étudier le changement de signe de la dérivée pour conclure.\n\nExemple : f'(x)=2x-4.\nOn résout f'(x)=0 : 2x-4=0, donc x=2.\n\nPour x<2, f'(x)<0.\nPour x>2, f'(x)>0.\n\nLa fonction est donc décroissante avant 2 puis croissante après 2. Elle possède un minimum en x=2.\n\nLe tableau de signes est une étape essentielle de l'étude de fonction.",
+      "keyFormulas": [
+        "f'(x)>0 ⇒ f croissante.",
+        "f'(x)<0 ⇒ f décroissante.",
+        "f'(x)=0 peut signaler un extremum si le signe change."
+      ],
+      "tips": [
+        "Résoudre f'(x)=0 avant de construire le tableau.",
+        "Tester ou déterminer le signe sur chaque intervalle.",
+        "Ne pas conclure à un maximum ou minimum sans examiner le changement de signe."
+      ]
+    },
+
+    {
+      "id": "maths_variations_001",
+      "subjectId": "MATHS",
+      "title": "Tableau de variations",
+      "chapter": "Dérivation et variations",
+      "durationMinutes": 45,
+      "summary": "Construire et interpréter le tableau de variations d'une fonction.",
+      "content": "Le tableau de variations résume les intervalles sur lesquels une fonction augmente ou diminue.\n\nMéthode :\n1. Déterminer le domaine de définition.\n2. Calculer la dérivée.\n3. Résoudre f'(x)=0.\n4. Étudier le signe de f'.\n5. En déduire les variations.\n6. Calculer les valeurs importantes de f.\n7. Présenter les résultats dans un tableau.\n\nExemple : g(x)=x²-4x-5.\n\ng'(x)=2x-4.\n\ng'(x)=0 pour x=2.\n\ng'(x)<0 sur ]-∞;2[ et g'(x)>0 sur ]2;+∞[.\n\nDonc g est décroissante sur ]-∞;2] puis croissante sur [2;+∞[.\n\ng(2)=-9. La fonction possède donc un minimum égal à -9.",
+      "keyFormulas": [
+        "f'>0 : fonction croissante.",
+        "f'<0 : fonction décroissante.",
+        "Un changement de - vers + donne un minimum.",
+        "Un changement de + vers - donne un maximum."
+      ],
+      "tips": [
+        "Le tableau de signes de f' doit précéder le tableau de variations.",
+        "Calculer les images des valeurs particulières.",
+        "Toujours respecter le domaine de définition."
+      ]
+    },
+
+    {
+      "id": "maths_extremum_001",
+      "subjectId": "MATHS",
+      "title": "Maximum et minimum",
+      "chapter": "Dérivation et variations",
+      "durationMinutes": 40,
+      "summary": "Identifier les extrema locaux d'une fonction grâce à sa dérivée.",
+      "content": "Un minimum local de f en a signifie que, pour les valeurs de x proches de a, f(x) est supérieure ou égale à f(a). Un maximum local signifie que f(x) est inférieure ou égale à f(a).\n\nAvec la dérivée, un changement de signe de f' permet de reconnaître un extremum.\n\nSi f' passe de négatif à positif en a, f possède un minimum local en a.\n\nSi f' passe de positif à négatif en a, f possède un maximum local en a.\n\nAttention : f'(a)=0 seul ne suffit pas toujours. Par exemple, pour f(x)=x³, f'(0)=0 mais la fonction est croissante avant et après 0. Il n'y a donc ni maximum ni minimum en 0.\n\nPour trouver la valeur de l'extremum, calculer f(a).",
+      "keyFormulas": [
+        "f' : - puis + ⇒ minimum local.",
+        "f' : + puis - ⇒ maximum local.",
+        "f'(a)=0 ne suffit pas à lui seul pour conclure."
+      ],
+      "tips": [
+        "Toujours étudier le signe de la dérivée de part et d'autre du point critique.",
+        "Calculer l'image du point pour obtenir la valeur de l'extremum.",
+        "Ne pas confondre extremum local et extremum global."
+      ]
+    },
+
+    {
+      "id": "maths_tangente_001",
+      "subjectId": "MATHS",
+      "title": "Équation d'une tangente",
+      "chapter": "Dérivation",
+      "durationMinutes": 45,
+      "summary": "Déterminer l'équation de la tangente à une courbe en un point.",
+      "content": "Si f est dérivable en a, l'équation de la tangente à la courbe représentative de f au point d'abscisse a est : y = f'(a)(x-a)+f(a).\n\nLe nombre f'(a) est le coefficient directeur de la tangente.\n\nExemple : soit f(x)=x²-6x+5. Cherchons la tangente au point d'abscisse 3.\n\nf'(x)=2x-6.\nDonc f'(3)=0.\n\nf(3)=9-18+5=-4.\n\nL'équation est donc y=0(x-3)-4, soit y=-4.\n\nLa tangente est horizontale parce que le coefficient directeur est nul.\n\nMéthode :\n1. Calculer f'(x).\n2. Calculer f'(a).\n3. Calculer f(a).\n4. Utiliser y=f'(a)(x-a)+f(a).\n5. Développer et simplifier si nécessaire.",
+      "keyFormulas": [
+        "T_a : y = f'(a)(x-a)+f(a).",
+        "Coefficient directeur de la tangente = f'(a)."
+      ],
+      "tips": [
+        "Ne pas confondre f(a) et f'(a).",
+        "Calculer séparément les deux valeurs.",
+        "Vérifier que le point (a;f(a)) appartient à la tangente."
+      ]
+    },
+
+    {
+      "id": "maths_etude_fonction_001",
+      "subjectId": "MATHS",
+      "title": "Étude complète d'une fonction",
+      "chapter": "Fonctions numériques",
+      "durationMinutes": 70,
+      "summary": "Appliquer une méthode complète pour étudier une fonction et représenter sa courbe.",
+      "content": "Une étude complète de fonction rassemble plusieurs outils.\n\nÉtape 1 : déterminer le domaine de définition.\n\nÉtape 2 : rechercher les limites aux bornes du domaine.\n\nÉtape 3 : calculer la dérivée.\n\nÉtape 4 : étudier le signe de la dérivée.\n\nÉtape 5 : construire le tableau de variations.\n\nÉtape 6 : calculer les points particuliers : intersections avec les axes, extrema, valeurs remarquables.\n\nÉtape 7 : rechercher éventuellement les asymptotes.\n\nÉtape 8 : calculer les équations des tangentes demandées.\n\nÉtape 9 : tracer une représentation graphique cohérente.\n\nExemple de méthode avec f(x)=x²-4x-5 :\n\nDf=R.\nf'(x)=2x-4.\nf'(x)=0 pour x=2.\nf' est négative avant 2 et positive après 2.\nDonc f décroît puis croît.\nf(2)=-9.\n\nPour rechercher les intersections avec l'axe des abscisses, résoudre f(x)=0.\n\nCette méthode est fondamentale dans les exercices de type Bac.",
+      "keyFormulas": [
+        "f'(x)>0 ⇒ croissance.",
+        "f'(x)<0 ⇒ décroissance.",
+        "Tangente en a : y=f'(a)(x-a)+f(a)."
+      ],
+      "tips": [
+        "Présenter clairement chaque étape.",
+        "Ne pas sauter l'étude du domaine.",
+        "Un tableau de variations doit être cohérent avec le signe de f'.",
+        "Pour le graphique, placer d'abord les points importants."
+      ]
+    },
+
+    {
+      "id": "maths_ln_001",
+      "subjectId": "MATHS",
+      "title": "Fonction logarithme népérien",
+      "chapter": "Fonctions logarithmiques",
+      "durationMinutes": 60,
+      "summary": "Étudier la fonction ln, ses propriétés, dérivée et limites.",
+      "content": "La fonction logarithme népérien, notée ln, est définie sur ]0;+∞[.\n\nElle est strictement croissante sur son domaine.\n\nOn a ln(1)=0 et ln(e)=1.\n\nPropriétés fondamentales :\nln(ab)=ln(a)+ln(b), pour a>0 et b>0.\nln(a/b)=ln(a)-ln(b).\nln(a^n)=n ln(a), pour a>0.\n\nLa fonction ln permet notamment de transformer des produits en sommes et des puissances en produits.\n\nDérivée : (ln x)'=1/x pour x>0.\n\nLimites importantes :\nlim(x→0+) ln x = -∞.\nlim(x→+∞) ln x = +∞.\n\nExemple : résoudre ln(x)=2.\nPar définition du logarithme, x=e².\n\nPour résoudre ln(A(x))=ln(B(x)), il faut d'abord vérifier que A(x)>0 et B(x)>0, puis utiliser l'injectivité de ln : A(x)=B(x).",
+      "keyFormulas": [
+        "ln(1)=0.",
+        "ln(e)=1.",
+        "ln(ab)=ln(a)+ln(b).",
+        "ln(a/b)=ln(a)-ln(b).",
+        "ln(a^n)=nln(a).",
+        "(ln x)'=1/x.",
+        "ln(x)=a ⇔ x=e^a."
+      ],
+      "tips": [
+        "Toujours vérifier les conditions de positivité.",
+        "Ne jamais écrire ln(a+b)=ln(a)+ln(b) : cette propriété est fausse.",
+        "Pour une équation logarithmique, déterminer d'abord le domaine."
+      ]
+    },
+
+    {
+      "id": "maths_exp_001",
+      "subjectId": "MATHS",
+      "title": "Fonction exponentielle",
+      "chapter": "Fonctions exponentielles",
+      "durationMinutes": 60,
+      "summary": "Étudier la fonction exponentielle et résoudre des équations et inéquations exponentielles.",
+      "content": "La fonction exponentielle, notée exp ou e^x, est définie sur R.\n\nElle vérifie e^0=1 et e^(a+b)=e^a e^b.\n\nElle est strictement croissante sur R.\n\nSa dérivée est (e^x)'=e^x.\n\nComme e^x est toujours strictement positif, on a e^x>0 pour tout réel x.\n\nPropriétés :\ne^(a-b)=e^a/e^b.\ne^(-a)=1/e^a.\n\nPour résoudre e^x=e^a, l'injectivité de la fonction exponentielle donne x=a.\n\nExemple : résoudre e^(2x-1)=e^5.\nOn obtient 2x-1=5, donc x=3.\n\nPour une équation de type e^x=k avec k>0, on peut utiliser le logarithme : x=ln(k).",
+      "keyFormulas": [
+        "e^0=1.",
+        "e^(a+b)=e^a e^b.",
+        "e^(-a)=1/e^a.",
+        "(e^x)'=e^x.",
+        "e^x>0 pour tout x réel.",
+        "e^a=e^b ⇔ a=b."
+      ],
+      "tips": [
+        "Une exponentielle n'est jamais nulle.",
+        "Utiliser l'injectivité pour comparer deux exponentielles.",
+        "Pour e^x=k, il faut k>0."
+      ]
+    },
+
+    {
+      "id": "maths_primitives_001",
+      "subjectId": "MATHS",
+      "title": "Primitives",
+      "chapter": "Primitives et intégrales",
+      "durationMinutes": 55,
+      "summary": "Comprendre la notion de primitive et déterminer des primitives usuelles.",
+      "content": "Une fonction F est une primitive de f sur un intervalle I si F est dérivable sur I et F'(x)=f(x) pour tout x de I.\n\nSi F est une primitive de f, alors toutes les primitives de f sont de la forme F(x)+C, où C est une constante réelle.\n\nPrimitives usuelles :\n\nUne primitive de x^n, avec n différent de -1, est x^(n+1)/(n+1).\n\nUne primitive de 1/x sur ]0;+∞[ est ln(x).\n\nUne primitive de e^x est e^x.\n\nExemple : une primitive de 3x²-4x+5 est x³-2x²+5x+C.\n\nPour vérifier une primitive, il suffit de la dériver.\n\nDans un problème, une condition comme F(a)=b permet de déterminer la constante C.",
+      "keyFormulas": [
+        "∫x^n dx = x^(n+1)/(n+1)+C, n≠-1.",
+        "∫1/x dx = ln|x|+C sur un intervalle ne contenant pas 0.",
+        "∫e^x dx = e^x+C.",
+        "Toutes les primitives diffèrent d'une constante."
+      ],
+      "tips": [
+        "Toujours vérifier le résultat en dérivant.",
+        "Ne pas oublier la constante C.",
+        "Pour 1/x, tenir compte du domaine."
+      ]
+    },
+
+    {
+      "id": "maths_integrales_001",
+      "subjectId": "MATHS",
+      "title": "Intégrale et calcul d'aire",
+      "chapter": "Primitives et intégrales",
+      "durationMinutes": 65,
+      "summary": "Calculer une intégrale à l'aide d'une primitive et interpréter une intégrale comme une aire algébrique.",
+      "content": "Si F est une primitive de f sur [a;b], alors l'intégrale de f entre a et b est : ∫[a;b] f(x)dx = F(b)-F(a).\n\nCette relation est appelée formule de Newton-Leibniz.\n\nLorsque f(x)≥0 sur [a;b], l'intégrale représente l'aire du domaine compris entre la courbe de f, l'axe des abscisses et les droites x=a et x=b.\n\nSi la fonction prend des valeurs négatives, l'intégrale représente une aire algébrique : les parties situées sous l'axe sont comptées négativement.\n\nExemple : calculons ∫[0;2] x² dx.\nUne primitive de x² est x³/3.\nDonc l'intégrale vaut 2³/3 - 0³/3 = 8/3.\n\nPour calculer une aire géométrique lorsque la courbe passe sous l'axe, il faut éventuellement découper l'intervalle et prendre les valeurs absolues des intégrales correspondantes.\n\nPour une aire entre deux courbes f et g, lorsque f(x)≥g(x), on utilise ∫[a;b](f(x)-g(x))dx.",
+      "keyFormulas": [
+        "∫[a;b] f(x)dx = F(b)-F(a).",
+        "Aire sous une courbe positive = ∫[a;b]f(x)dx.",
+        "Aire entre deux courbes = ∫[a;b](f(x)-g(x))dx lorsque f≥g."
+      ],
+      "tips": [
+        "Trouver une primitive avant de calculer l'intégrale.",
+        "Vérifier l'ordre des bornes.",
+        "Pour une aire géométrique, vérifier le signe de la fonction."
+      ]
+    },
+
+    {
+      "id": "maths_methodes_001",
+      "subjectId": "MATHS",
+      "title": "Méthode générale pour un exercice de fonction",
+      "chapter": "Méthodes Bac",
+      "durationMinutes": 50,
+      "summary": "Organiser correctement une étude de fonction dans un exercice de niveau Bac.",
+      "content": "Dans un exercice de fonction, la présentation est aussi importante que les calculs.\n\nMÉTHODE CONSEILLÉE\n\n1. Lire attentivement la fonction et déterminer son domaine.\n\n2. Calculer les limites demandées.\n\n3. Calculer la dérivée en détaillant les règles utilisées.\n\n4. Résoudre f'(x)=0.\n\n5. Construire le tableau de signes de f'.\n\n6. En déduire le tableau de variations.\n\n7. Calculer les valeurs particulières.\n\n8. Rechercher les intersections avec les axes lorsque cela est demandé.\n\n9. Déterminer les asymptotes éventuelles.\n\n10. Déterminer les tangentes demandées.\n\n11. Tracer la courbe en utilisant toutes les informations précédentes.\n\nCONSEIL DE RÉDACTION\n\nUne conclusion doit être précise. Par exemple : « Ainsi, f est strictement décroissante sur ]-∞;2] et strictement croissante sur [2;+∞[. Elle admet donc en x=2 un minimum égal à -9. »\n\nCette méthode doit devenir un automatisme pour les sujets de Bac.",
+      "keyFormulas": [
+        "Tangente : y=f'(a)(x-a)+f(a).",
+        "f'>0 ⇒ croissance.",
+        "f'<0 ⇒ décroissance.",
+        "Intégrale : ∫[a;b]f=F(b)-F(a)."
+      ],
+      "tips": [
+        "Présenter les calculs dans l'ordre logique.",
+        "Encadrer les résultats importants.",
+        "Vérifier les signes avant de tracer une courbe."
       ]
     }
   ],
 
   "exercises": [
     {
-      "id": "remote_maths_ex_001",
+      "id": "maths_ex_001",
       "subjectId": "MATHS",
-      "title": "Étude d'une fonction",
-      "chapter": "Dérivation et variations",
+      "title": "Domaine avec racine",
+      "chapter": "Fonctions numériques",
       "difficulty": "Facile",
-      "statement": "Soit g(x) = x² - 4x - 5. Étudier les variations de g.",
+      "statement": "Déterminer le domaine de définition de f(x)=√(3x-6).",
       "questions": [
         {
-          "id": "remote_maths_q_001",
-          "question": "Quelle est la dérivée de g(x) ?",
-          "options": [
-            "2x - 4",
-            "x - 4",
-            "2x + 4",
-            "x² - 4"
-          ],
-          "correctIndex": 0,
-          "explanation": "La dérivée de x² est 2x et celle de -4x est -4."
-        }
-      ],
-      "solutionSteps": [
-        "Calculer g'(x) = 2x - 4.",
-        "Résoudre g'(x) = 0 : 2x - 4 = 0, donc x = 2.",
-        "g'(x) est négatif avant 2 et positif après 2.",
-        "Donc g est décroissante sur ]-∞ ; 2] et croissante sur [2 ; +∞[.",
-        "g(2) = 4 - 8 - 5 = -9."
-      ]
-    },
-
-    {
-      "id": "remote_maths_ex_002",
-      "subjectId": "MATHS",
-      "title": "Déterminer un domaine de définition",
-      "chapter": "Domaine de définition",
-      "difficulty": "Facile",
-      "statement": "Déterminer le domaine de définition de f(x) = √(x - 2).",
-      "questions": [
-        {
-          "id": "remote_maths_q_002",
+          "id": "maths_q_001",
           "question": "Quelle condition doit vérifier x ?",
           "options": [
-            "x > 2",
-            "x ≥ 2",
-            "x ≤ 2",
-            "x ≠ 2"
+            "x>2",
+            "x≥2",
+            "x≤2",
+            "x≠2"
           ],
           "correctIndex": 1,
-          "explanation": "Pour qu'une racine carrée soit définie dans R, son contenu doit être supérieur ou égal à zéro."
+          "explanation": "Sous une racine carrée réelle, le contenu doit être supérieur ou égal à zéro : 3x-6≥0, donc x≥2."
         }
       ],
       "solutionSteps": [
-        "On doit avoir x - 2 ≥ 0.",
-        "Donc x ≥ 2.",
-        "Le domaine de définition est Df = [2 ; +∞[."
+        "On doit avoir 3x-6≥0.",
+        "Donc 3x≥6.",
+        "En divisant par 3, on obtient x≥2.",
+        "Ainsi Df=[2;+∞[."
       ]
     },
 
     {
-      "id": "remote_maths_ex_003",
+      "id": "maths_ex_002",
       "subjectId": "MATHS",
-      "title": "Calcul d'une limite",
-      "chapter": "Limites",
+      "title": "Domaine d'une fonction rationnelle",
+      "chapter": "Fonctions numériques",
       "difficulty": "Facile",
-      "statement": "Calculer la limite de f(x) = 1/x lorsque x tend vers +∞.",
+      "statement": "Déterminer le domaine de définition de f(x)=(2x+1)/(x-4).",
       "questions": [
         {
-          "id": "remote_maths_q_003",
-          "question": "Quelle est la limite de 1/x lorsque x tend vers +∞ ?",
+          "id": "maths_q_002",
+          "question": "Quelle valeur faut-il exclure ?",
           "options": [
-            "+∞",
-            "-∞",
+            "-4",
             "0",
-            "1"
+            "1",
+            "4"
           ],
-          "correctIndex": 2,
-          "explanation": "Lorsque x devient très grand, 1/x devient de plus en plus proche de zéro."
+          "correctIndex": 3,
+          "explanation": "Le dénominateur x-4 doit être différent de zéro. Il s'annule pour x=4."
+        }
+      ],
+      "solutionSteps": [
+        "Le dénominateur doit être non nul.",
+        "x-4≠0.",
+        "Donc x≠4.",
+        "Ainsi Df=R\\{4}."
+      ]
+    },
+
+    {
+      "id": "maths_ex_003",
+      "subjectId": "MATHS",
+      "title": "Limite simple",
+      "chapter": "Limites",
+      "difficulty": "Facile",
+      "statement": "Calculer lim(x→+∞) (5/x).",
+      "questions": [
+        {
+          "id": "maths_q_003",
+          "question": "Quelle est cette limite ?",
+          "options": [
+            "0",
+            "1",
+            "5",
+            "+∞"
+          ],
+          "correctIndex": 0,
+          "explanation": "Le quotient d'une constante par une quantité qui devient infiniment grande tend vers zéro."
         }
       ],
       "solutionSteps": [
         "Lorsque x tend vers +∞, le dénominateur x devient très grand.",
-        "La fraction 1/x devient donc de plus en plus petite.",
-        "Ainsi, lim(x→+∞) 1/x = 0."
+        "La fraction 5/x devient donc de plus en plus proche de 0.",
+        "La limite est 0."
+      ]
+    },
+
+    {
+      "id": "maths_ex_004",
+      "subjectId": "MATHS",
+      "title": "Dérivée et variations",
+      "chapter": "Dérivation et variations",
+      "difficulty": "Moyen",
+      "statement": "Soit g(x)=x²-4x-5. Étudier les variations de g.",
+      "questions": [
+        {
+          "id": "maths_q_004",
+          "question": "Quelle est la dérivée de g ?",
+          "options": [
+            "2x-4",
+            "x-4",
+            "2x+4",
+            "x²-4"
+          ],
+          "correctIndex": 0,
+          "explanation": "La dérivée de x² est 2x et celle de -4x est -4."
+        },
+        {
+          "id": "maths_q_005",
+          "question": "Pour quelle valeur de x la dérivée s'annule-t-elle ?",
+          "options": [
+            "-2",
+            "0",
+            "2",
+            "4"
+          ],
+          "correctIndex": 2,
+          "explanation": "2x-4=0 donne x=2."
+        }
+      ],
+      "solutionSteps": [
+        "g'(x)=2x-4.",
+        "g'(x)=0 équivaut à 2x-4=0, donc x=2.",
+        "Pour x<2, g'(x)<0.",
+        "Pour x>2, g'(x)>0.",
+        "Donc g est décroissante sur ]-∞;2] puis croissante sur [2;+∞[.",
+        "g(2)=4-8-5=-9.",
+        "La fonction possède donc un minimum égal à -9 en x=2."
+      ]
+    },
+
+    {
+      "id": "maths_ex_005",
+      "subjectId": "MATHS",
+      "title": "Tangente à une courbe",
+      "chapter": "Dérivation",
+      "difficulty": "Moyen",
+      "statement": "Soit f(x)=x²-6x+5. Déterminer l'équation de la tangente à la courbe au point d'abscisse 3.",
+      "questions": [
+        {
+          "id": "maths_q_006",
+          "question": "Quelle est f'(3) ?",
+          "options": [
+            "-6",
+            "0",
+            "3",
+            "6"
+          ],
+          "correctIndex": 1,
+          "explanation": "f'(x)=2x-6, donc f'(3)=0."
+        }
+      ],
+      "solutionSteps": [
+        "f'(x)=2x-6.",
+        "f'(3)=6-6=0.",
+        "f(3)=9-18+5=-4.",
+        "La formule de la tangente est y=f'(3)(x-3)+f(3).",
+        "Donc y=0(x-3)-4.",
+        "L'équation de la tangente est y=-4."
+      ]
+    },
+
+    {
+      "id": "maths_ex_006",
+      "subjectId": "MATHS",
+      "title": "Extremum d'une fonction",
+      "chapter": "Dérivation et variations",
+      "difficulty": "Moyen",
+      "statement": "Soit f(x)=x²-8x+10. Déterminer le minimum de f.",
+      "questions": [
+        {
+          "id": "maths_q_007",
+          "question": "Quelle est l'abscisse du minimum ?",
+          "options": [
+            "2",
+            "4",
+            "8",
+            "10"
+          ],
+          "correctIndex": 1,
+          "explanation": "f'(x)=2x-8. La dérivée s'annule pour x=4 et passe de négative à positive."
+        }
+      ],
+      "solutionSteps": [
+        "f'(x)=2x-8.",
+        "f'(x)=0 donne x=4.",
+        "f' est négative avant 4 et positive après 4.",
+        "f possède donc un minimum en x=4.",
+        "f(4)=16-32+10=-6.",
+        "Le minimum est donc -6."
+      ]
+    },
+
+    {
+      "id": "maths_ex_007",
+      "subjectId": "MATHS",
+      "title": "Logarithme népérien",
+      "chapter": "Fonction logarithme",
+      "difficulty": "Moyen",
+      "statement": "Résoudre dans R l'équation ln(x)=2.",
+      "questions": [
+        {
+          "id": "maths_q_008",
+          "question": "Quelle est la solution ?",
+          "options": [
+            "x=2",
+            "x=e",
+            "x=e²",
+            "x=ln(2)"
+          ],
+          "correctIndex": 2,
+          "explanation": "Par définition de l'exponentielle et du logarithme, ln(x)=2 équivaut à x=e²."
+        }
+      ],
+      "solutionSteps": [
+        "L'équation impose x>0.",
+        "On applique la fonction exponentielle aux deux membres.",
+        "e^(ln x)=e².",
+        "Donc x=e².",
+        "La solution est S={e²}."
+      ]
+    },
+
+    {
+      "id": "maths_ex_008",
+      "subjectId": "MATHS",
+      "title": "Propriétés du logarithme",
+      "chapter": "Fonction logarithme",
+      "difficulty": "Moyen",
+      "statement": "Simplifier A=ln(12)-ln(3).",
+      "questions": [
+        {
+          "id": "maths_q_009",
+          "question": "Quelle propriété permet de simplifier A ?",
+          "options": [
+            "ln(a+b)=ln(a)+ln(b)",
+            "ln(a/b)=ln(a)-ln(b)",
+            "ln(a-b)=ln(a)-ln(b)",
+            "ln(a²)=2+a"
+          ],
+          "correctIndex": 1,
+          "explanation": "La propriété correcte est ln(a/b)=ln(a)-ln(b), pour a et b strictement positifs."
+        }
+      ],
+      "solutionSteps": [
+        "On utilise ln(a)-ln(b)=ln(a/b).",
+        "Donc A=ln(12/3).",
+        "12/3=4.",
+        "Ainsi A=ln(4)."
+      ]
+    },
+
+    {
+      "id": "maths_ex_009",
+      "subjectId": "MATHS",
+      "title": "Équation exponentielle",
+      "chapter": "Fonction exponentielle",
+      "difficulty": "Moyen",
+      "statement": "Résoudre e^(2x-1)=e^5.",
+      "questions": [
+        {
+          "id": "maths_q_010",
+          "question": "Quelle équation obtient-on après identification des exposants ?",
+          "options": [
+            "2x-1=5",
+            "2x-1=e^5",
+            "e^(2x)=5",
+            "x=5"
+          ],
+          "correctIndex": 0,
+          "explanation": "La fonction exponentielle est injective : e^a=e^b implique a=b."
+        }
+      ],
+      "solutionSteps": [
+        "e^(2x-1)=e^5.",
+        "Par injectivité de l'exponentielle, 2x-1=5.",
+        "Donc 2x=6.",
+        "Ainsi x=3.",
+        "La solution est S={3}."
+      ]
+    },
+
+    {
+      "id": "maths_ex_010",
+      "subjectId": "MATHS",
+      "title": "Déterminer une primitive",
+      "chapter": "Primitives",
+      "difficulty": "Moyen",
+      "statement": "Déterminer une primitive de f(x)=3x²-4x+5.",
+      "questions": [
+        {
+          "id": "maths_q_011",
+          "question": "Quelle expression est une primitive de f ?",
+          "options": [
+            "x³-2x²+5x",
+            "3x³-4x²+5x",
+            "6x-4",
+            "x²-4x+5"
+          ],
+          "correctIndex": 0,
+          "explanation": "La dérivée de x³-2x²+5x est 3x²-4x+5."
+        }
+      ],
+      "solutionSteps": [
+        "Une primitive de 3x² est x³.",
+        "Une primitive de -4x est -2x².",
+        "Une primitive de 5 est 5x.",
+        "Donc F(x)=x³-2x²+5x+C.",
+        "On peut vérifier en dérivant F."
+      ]
+    },
+
+    {
+      "id": "maths_ex_011",
+      "subjectId": "MATHS",
+      "title": "Intégrale simple",
+      "chapter": "Intégrales",
+      "difficulty": "Moyen",
+      "statement": "Calculer I=∫[0;2] x² dx.",
+      "questions": [
+        {
+          "id": "maths_q_012",
+          "question": "Quelle est une primitive de x² ?",
+          "options": [
+            "2x",
+            "x³/3",
+            "x²/2",
+            "3x²"
+          ],
+          "correctIndex": 1,
+          "explanation": "La dérivée de x³/3 est x²."
+        }
+      ],
+      "solutionSteps": [
+        "Une primitive de x² est F(x)=x³/3.",
+        "I=F(2)-F(0).",
+        "I=8/3-0.",
+        "Donc I=8/3."
+      ]
+    },
+
+    {
+      "id": "maths_ex_012",
+      "subjectId": "MATHS",
+      "title": "Aire sous une courbe",
+      "chapter": "Intégrales et aires",
+      "difficulty": "Moyen",
+      "statement": "Calculer l'aire située sous la courbe de f(x)=2x entre x=0 et x=3.",
+      "questions": [
+        {
+          "id": "maths_q_013",
+          "question": "Quelle intégrale représente cette aire ?",
+          "options": [
+            "∫[0;3]2x dx",
+            "∫[0;3]x² dx",
+            "∫[0;2]3x dx",
+            "∫[1;3]2x dx"
+          ],
+          "correctIndex": 0,
+          "explanation": "L'aire est l'intégrale de f sur l'intervalle [0;3]."
+        }
+      ],
+      "solutionSteps": [
+        "Sur [0;3], f(x)=2x est positive.",
+        "Une primitive de 2x est x².",
+        "A=∫[0;3]2x dx.",
+        "A=3²-0².",
+        "Donc A=9 unités d'aire."
+      ]
+    },
+
+    {
+      "id": "maths_ex_013",
+      "subjectId": "MATHS",
+      "title": "Étude de variations type Bac",
+      "chapter": "Étude de fonction",
+      "difficulty": "Difficile",
+      "statement": "Soit f définie sur R par f(x)=x³-3x²-9x+2. Étudier les variations de f.",
+      "questions": [
+        {
+          "id": "maths_q_014",
+          "question": "Quelle est la dérivée de f ?",
+          "options": [
+            "3x²-6x-9",
+            "x²-6x-9",
+            "3x²-3x-9",
+            "3x²-6x+9"
+          ],
+          "correctIndex": 0,
+          "explanation": "La dérivée de x³ est 3x², celle de -3x² est -6x et celle de -9x est -9."
+        }
+      ],
+      "solutionSteps": [
+        "f'(x)=3x²-6x-9.",
+        "On factorise : f'(x)=3(x²-2x-3).",
+        "x²-2x-3=(x-3)(x+1).",
+        "Donc f'(x)=3(x-3)(x+1).",
+        "Les valeurs critiques sont x=-1 et x=3.",
+        "Le signe de f' est positif sur ]-∞;-1[, négatif sur ]-1;3[, puis positif sur ]3;+∞[.",
+        "Ainsi f est croissante, puis décroissante, puis croissante.",
+        "En calculant f(-1) et f(3), on obtient les valeurs des extrema."
+      ]
+    },
+
+    {
+      "id": "maths_ex_014",
+      "subjectId": "MATHS",
+      "title": "Exercice de synthèse",
+      "chapter": "Méthodes Bac",
+      "difficulty": "Difficile",
+      "statement": "Soit g(x)=x²-4x-5. Déterminer son domaine, sa dérivée, ses variations, son minimum et l'équation de la tangente au point d'abscisse 3.",
+      "questions": [
+        {
+          "id": "maths_q_015",
+          "question": "Quel est le minimum de g ?",
+          "options": [
+            "-9",
+            "-5",
+            "0",
+            "9"
+          ],
+          "correctIndex": 0,
+          "explanation": "g'(x)=2x-4 s'annule en 2 et g(2)=-9. Le signe de g' passe de négatif à positif."
+        }
+      ],
+      "solutionSteps": [
+        "g est un polynôme, donc son domaine est R.",
+        "g'(x)=2x-4.",
+        "g'(x)=0 pour x=2.",
+        "g' est négative sur ]-∞;2[ et positive sur ]2;+∞[.",
+        "g est donc décroissante puis croissante.",
+        "g(2)=-9 : le minimum vaut -9.",
+        "Pour la tangente en x=3 : g'(3)=2 et g(3)=9-12-5=-8.",
+        "T_3 : y=2(x-3)-8.",
+        "Donc y=2x-14."
       ]
     }
   ]
