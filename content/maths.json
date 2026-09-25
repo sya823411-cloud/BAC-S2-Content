@@ -1,268 +1,419 @@
 {
-  "version": 8,
+  "version": 9,
   "subjectId": "MATHS",
   "lessons": [
     {
-      "id": "s2_maths_analyse_001",
+      "id": "s2_maths_fonctions_001",
       "subjectId": "MATHS",
-      "title": "Fonctions numériques : domaine, limites et représentation",
-      "chapter": "Analyse",
+      "title": "Fonctions numériques : domaine et représentation",
+      "chapter": "Analyse - Fonctions",
       "durationMinutes": 45,
-      "summary": "Étudier une fonction depuis son domaine de définition jusqu'à sa représentation graphique.",
-      "content": "## 1. Définition\nUne fonction f associe à chaque nombre x d'un ensemble D un unique nombre réel f(x). L'ensemble D est le domaine de définition de f.\n\n## 2. Domaine de définition\nOn doit respecter les contraintes suivantes :\n- une fraction impose que le dénominateur soit non nul ;\n- une racine carrée impose que le radicand soit positif ou nul ;\n- un logarithme népérien impose que son argument soit strictement positif.\n\nExemple : f(x)=sqrt(x-2)/(x-5). On doit avoir x-2 >= 0 et x-5 != 0. Donc Df=[2,+infini[ privé de {5}.\n\n## 3. Limite\nDire que lim f(x)=L lorsque x tend vers a signifie que f(x) se rapproche de L lorsque x se rapproche de a.\n\nOn distingue les limites à gauche et à droite : lim(x->a-) f(x) et lim(x->a+) f(x).\n\n## 4. Limites à l'infini\nOn étudie le comportement de f(x) lorsque x devient très grand positivement ou négativement.\n\n## 5. Asymptotes\nSi lim(x->a) f(x)=+infini ou -infini, la droite x=a est une asymptote verticale.\nSi lim(x->+infini) f(x)=L, la droite y=L est une asymptote horizontale.\n\n## Méthode Bac\n1. Déterminer Df.\n2. Calculer les limites aux bornes du domaine.\n3. Rechercher les asymptotes.\n4. Étudier le signe et les variations.\n5. Construire le tableau de variations.\n6. Tracer la courbe.",
+      "summary": "Déterminer le domaine d'une fonction, calculer son image et comprendre sa représentation graphique.",
+      "content": "## 1. Définition\nUne fonction numérique f associe à chaque réel x d'un ensemble Df un unique réel f(x). L'ensemble Df est le domaine de définition.\n\n## 2. Détermination du domaine\nPour une fraction, le dénominateur doit être non nul.\nPour une racine carrée, le radicand doit être positif ou nul.\nPour ln(u(x)), il faut u(x)>0.\n\nExemple : f(x)=sqrt(x-2)/(x-5).\nOn doit avoir x>=2 et x!=5.\nDonc Df=[2,+infini[ privé de {5}.\n\n## 3. Représentation graphique\nLa courbe représentative de f est l'ensemble des points M(x,f(x)).\n\n## 4. Image d'un intervalle\nL'étude des variations permet de déterminer l'image d'un intervalle par f.\n\n## Méthode\n1. Déterminer le domaine.\n2. Rechercher les valeurs particulières.\n3. Étudier les limites.\n4. Étudier les variations.\n5. Construire le tableau de variations.\n6. Représenter la courbe.",
       "keyFormulas": [
-        "Df d'une fraction : dénominateur != 0",
-        "sqrt(u(x)) : u(x) >= 0",
-        "ln(u(x)) : u(x) > 0",
-        "lim(x->a) f(x)=L : f(x) se rapproche de L lorsque x se rapproche de a"
+        "Fraction : dénominateur != 0",
+        "sqrt(u) : u >= 0",
+        "ln(u) : u > 0"
       ],
       "tips": [
-        "Toujours déterminer le domaine avant les limites et les dérivées.",
-        "Pour une limite à une valeur interdite, vérifier séparément les limites à gauche et à droite."
+        "Toujours déterminer le domaine avant de calculer une dérivée ou une limite."
       ]
     },
     {
-      "id": "s2_maths_analyse_002",
+      "id": "s2_maths_fonctions_002",
       "subjectId": "MATHS",
-      "title": "Continuité d'une fonction",
-      "chapter": "Analyse",
-      "durationMinutes": 35,
-      "summary": "Comprendre la continuité et son utilisation pour démontrer l'existence d'une solution.",
-      "content": "## Définition\nUne fonction f est continue en a si lim(x->a) f(x)=f(a).\n\nElle est continue sur un intervalle si elle est continue en chaque point de cet intervalle.\n\nLes fonctions polynômes sont continues sur R. Les fonctions rationnelles sont continues sur tout intervalle où leur dénominateur ne s'annule pas. Les fonctions usuelles ln et exp sont continues sur leurs domaines.\n\n## Théorème des valeurs intermédiaires\nSi f est continue sur [a,b], alors toute valeur comprise entre f(a) et f(b) est prise au moins une fois par f sur [a,b].\n\nEn particulier, si f(a) et f(b) sont de signes contraires, alors il existe au moins un réel c dans ]a,b[ tel que f(c)=0.\n\n## Unicité\nSi, en plus, f est strictement monotone sur [a,b], cette solution est unique.\n\n## Application\nPour résoudre f(x)=0 :\n1. vérifier la continuité ;\n2. chercher un intervalle [a,b] où f(a)f(b)<0 ;\n3. appliquer le théorème des valeurs intermédiaires ;\n4. utiliser les variations pour établir l'unicité.",
+      "title": "Continuité et théorème des valeurs intermédiaires",
+      "chapter": "Analyse - Fonctions",
+      "durationMinutes": 45,
+      "summary": "Étudier la continuité et utiliser le théorème des valeurs intermédiaires pour les équations.",
+      "content": "## Définition\nf est continue en a si lim(x->a) f(x)=f(a).\n\nLes fonctions polynômes sont continues sur R. Les fonctions rationnelles sont continues sur leur domaine. Les fonctions usuelles ln, exp et les fonctions trigonométriques sont continues sur leurs domaines.\n\n## Théorème des valeurs intermédiaires\nSi f est continue sur [a,b], alors toute valeur comprise entre f(a) et f(b) est atteinte au moins une fois par f sur [a,b].\n\nEn particulier, si f(a)f(b)<0, alors l'équation f(x)=0 possède au moins une solution dans ]a,b[.\n\n## Unicité\nSi f est en plus strictement monotone sur [a,b], cette solution est unique.\n\n## Valeur approchée\nLe théorème permet d'encadrer une solution puis de rechercher une valeur approchée.",
       "keyFormulas": [
-        "Continuité en a : lim(x->a) f(x)=f(a)",
-        "Si f est continue sur [a,b], elle prend toutes les valeurs entre f(a) et f(b)",
-        "f(a)f(b)<0 et f continue => existence d'au moins une racine dans ]a,b["
+        "Continuité en a : lim(x->a)f(x)=f(a)",
+        "f(a)f(b)<0 et f continue => au moins une racine dans ]a,b["
       ],
       "tips": [
-        "Pour une équation, ne pas confondre existence et unicité.",
-        "La continuité donne l'existence ; la monotonie peut donner l'unicité."
+        "La continuité permet de démontrer l'existence ; la monotonie permet souvent de démontrer l'unicité."
       ]
     },
     {
-      "id": "s2_maths_analyse_003",
+      "id": "s2_maths_fonctions_003",
       "subjectId": "MATHS",
-      "title": "Dérivation et nombre dérivé",
-      "chapter": "Analyse",
+      "title": "Fonction réciproque",
+      "chapter": "Analyse - Fonctions",
       "durationMinutes": 50,
-      "summary": "Définition du nombre dérivé, interprétation géométrique et règles de dérivation.",
-      "content": "## Nombre dérivé\nLe nombre dérivé de f en a est défini par f'(a)=lim(h->0)[f(a+h)-f(a)]/h lorsqu'elle existe.\n\nIl représente le coefficient directeur de la tangente à la courbe de f au point d'abscisse a.\n\n## Dérivées usuelles\n(x^n)'=n x^(n-1)\n(sqrt(x))'=1/(2sqrt(x)) pour x>0\n(ln x)'=1/x pour x>0\n(e^x)'=e^x\n(sin x)'=cos x\n(cos x)'=-sin x\n\n## Règles\n(u+v)'=u'+v'\n(ku)'=ku'\n(uv)'=u'v+uv'\n(u/v)'=(u'v-uv')/v²\n\nPour une composée : (g o f)'=(g' o f)f'.\n\nExemple : f(x)=x²-3x+1 donne f'(x)=2x-3.\n\n## Interprétation physique\nLa dérivée d'une position par rapport au temps représente la vitesse instantanée.",
+      "summary": "Comprendre l'existence et la représentation graphique d'une fonction réciproque.",
+      "content": "## Définition\nUne fonction f possède une fonction réciproque sur un intervalle lorsque f réalise une bijection entre cet intervalle et son image.\n\nUne fonction continue et strictement monotone sur un intervalle possède une fonction réciproque sur son image.\n\nOn note cette fonction f^-1.\n\n## Propriété\nSi y=f(x), alors x=f^-1(y).\n\n## Représentation graphique\nLes courbes de f et de f^-1 sont symétriques par rapport à la droite y=x.\n\n## Exemple\nLa fonction f(x)=x^3 est strictement croissante sur R et sa réciproque est f^-1(x)=racine cubique de x.\n\n## Dérivée de la réciproque\nLorsque f est dérivable, monotone et que f'(x) ne s'annule pas, la dérivée de la réciproque vérifie :\n(f^-1)'(y)=1/f'(f^-1(y)).",
+      "keyFormulas": [
+        "f^-1(f(x))=x",
+        "f(f^-1(x))=x",
+        "(f^-1)'(y)=1/f'(f^-1(y))"
+      ],
+      "tips": [
+        "Pour rechercher une réciproque, commencer par écrire y=f(x), puis résoudre l'équation en x."
+      ]
+    },
+    {
+      "id": "s2_maths_limites_001",
+      "subjectId": "MATHS",
+      "title": "Limites et branches infinies",
+      "chapter": "Analyse - Limites",
+      "durationMinutes": 55,
+      "summary": "Calculer les limites et identifier les asymptotes et branches infinies.",
+      "content": "## Notion de limite\nDire que lim(x->a)f(x)=L signifie que f(x) se rapproche de L lorsque x se rapproche de a.\n\nOn distingue les limites à gauche et à droite.\n\n## Limites à l'infini\nOn étudie le comportement de f(x) lorsque x tend vers +infini ou -infini.\n\n## Asymptotes\nSi lim(x->a)f(x)=+infini ou -infini, x=a est une asymptote verticale.\nSi lim(x->+infini)f(x)=L, y=L est une asymptote horizontale.\nSi f(x)-(ax+b) tend vers 0, la droite y=ax+b est une asymptote oblique.\n\n## Formes indéterminées\nLes formes usuelles sont infini-infini, 0/0, 0*infini, infini/infini et certaines puissances indéterminées.\n\nIl faut transformer l'expression avant de conclure.",
+      "keyFormulas": [
+        "lim f(x)=L => asymptote y=L si x tend vers l'infini",
+        "lim f(x)=infini en a => asymptote x=a"
+      ],
+      "tips": [
+        "Ne jamais conclure à partir d'une forme indéterminée sans transformation."
+      ]
+    },
+    {
+      "id": "s2_maths_limites_002",
+      "subjectId": "MATHS",
+      "title": "Théorèmes de comparaison et limites de fonctions composées",
+      "chapter": "Analyse - Limites",
+      "durationMinutes": 45,
+      "summary": "Utiliser les comparaisons et les compositions pour calculer des limites.",
+      "content": "## Comparaison\nLes théorèmes de comparaison permettent de déterminer la limite d'une fonction à partir de fonctions dont les limites sont connues.\n\n## Fonction composée\nSi f(x) tend vers b lorsque x tend vers a et si g est continue en b, alors g(f(x)) tend vers g(b).\n\n## Exemple\nSi f(x) tend vers 2 et g(x)=x²+1, alors g(f(x)) tend vers 5.\n\n## Application\nCette propriété intervient fréquemment avec les fonctions ln, exp, racine et les fonctions trigonométriques.",
+      "keyFormulas": [
+        "f(x)->b et g continue en b => g(f(x))->g(b)"
+      ],
+      "tips": [
+        "Pour une fonction composée, identifier d'abord la limite de la fonction intérieure."
+      ]
+    },
+    {
+      "id": "s2_maths_derivation_001",
+      "subjectId": "MATHS",
+      "title": "Nombre dérivé et dérivée",
+      "chapter": "Analyse - Dérivation",
+      "durationMinutes": 50,
+      "summary": "Définir le nombre dérivé et comprendre son interprétation géométrique.",
+      "content": "## Nombre dérivé\nLe nombre dérivé de f en a est :\nf'(a)=lim(h->0)[f(a+h)-f(a)]/h.\n\nIl représente le coefficient directeur de la tangente à la courbe au point d'abscisse a.\n\n## Tangente\ny=f'(a)(x-a)+f(a).\n\n## Dérivées usuelles\n(x^n)'=nx^(n-1).\n(sqrt(x))'=1/(2sqrt(x)) pour x>0.\n(ln x)'=1/x.\n(e^x)'=e^x.\n(sin x)'=cos x.\n(cos x)'=-sin x.\n\n## Règles\n(u+v)'=u'+v'.\n(uv)'=u'v+uv'.\n(u/v)'=(u'v-uv')/v².\n\n## Composition\n(g o f)'=(g' o f)f'.",
       "keyFormulas": [
         "f'(a)=lim(h->0)[f(a+h)-f(a)]/h",
+        "y=f'(a)(x-a)+f(a)",
         "(uv)'=u'v+uv'",
-        "(u/v)'=(u'v-uv')/v²",
-        "(g o f)'=(g' o f)f'"
+        "(u/v)'=(u'v-uv')/v²"
       ],
       "tips": [
-        "Simplifier la fonction avant de dériver lorsque c'est possible.",
-        "Toujours vérifier le domaine de dérivation."
+        "La dérivée donne la pente instantanée de la courbe."
       ]
     },
     {
-      "id": "s2_maths_analyse_004",
+      "id": "s2_maths_derivation_002",
+      "subjectId": "MATHS",
+      "title": "Dérivation des fonctions composées",
+      "chapter": "Analyse - Dérivation",
+      "durationMinutes": 45,
+      "summary": "Calculer les dérivées des fonctions composées.",
+      "content": "## Théorème\nSi f est dérivable en x et g est dérivable en f(x), alors g o f est dérivable et :\n(g o f)'(x)=g'(f(x))f'(x).\n\n## Exemples\nSi h(x)=ln(2x+1), alors h'(x)=2/(2x+1).\n\nSi h(x)=e^(x²), alors h'(x)=2xe^(x²).\n\nSi h(x)=sqrt(3x+1), alors h'(x)=3/[2sqrt(3x+1)] lorsque l'expression est définie et x est dans le domaine de dérivabilité.\n\nCette règle est fondamentale pour les fonctions du type f(x)=g(u(x)).",
+      "keyFormulas": [
+        "(g o f)'=(g' o f)f'",
+        "[ln(u)]'=u'/u",
+        "[e^u]'=u'e^u"
+      ],
+      "tips": [
+        "Identifier la fonction extérieure et la fonction intérieure avant de dériver."
+      ]
+    },
+    {
+      "id": "s2_maths_derivation_003",
+      "subjectId": "MATHS",
+      "title": "Dérivées successives et points d'inflexion",
+      "chapter": "Analyse - Dérivation",
+      "durationMinutes": 50,
+      "summary": "Calculer f'', étudier la convexité et reconnaître un point d'inflexion.",
+      "content": "## Dérivées successives\nOn note f'', f''', ... les dérivées successives.\n\n## Point d'inflexion\nLa courbe peut changer de convexité en un point d'inflexion.\n\nSi f'' change de signe en a, alors le point d'abscisse a est un point d'inflexion dans les conditions usuelles du programme.\n\n## Exemple\nf(x)=x³.\nf'(x)=3x².\nf''(x)=6x.\nf'' change de signe en 0. Le point (0,0) est un point d'inflexion.\n\n## Utilisation\nLes dérivées successives permettent d'affiner l'étude d'une courbe et d'identifier sa forme locale.",
+      "keyFormulas": [
+        "f''=(f')'",
+        "Changement de signe de f'' => point d'inflexion dans les conditions du théorème"
+      ],
+      "tips": [
+        "Un simple calcul f''(a)=0 ne suffit pas à lui seul pour conclure à un point d'inflexion."
+      ]
+    },
+    {
+      "id": "s2_maths_variations_001",
       "subjectId": "MATHS",
       "title": "Signe de la dérivée et variations",
-      "chapter": "Analyse",
+      "chapter": "Analyse - Étude de fonctions",
       "durationMinutes": 45,
-      "summary": "Utiliser le signe de la dérivée pour étudier les variations et les extrema.",
-      "content": "## Théorème fondamental\nSi f'(x)>0 sur un intervalle, alors f est strictement croissante sur cet intervalle.\nSi f'(x)<0, alors f est strictement décroissante.\nSi f'=0 sur un intervalle, alors f est constante sur cet intervalle.\n\n## Extremum\nSi f passe de croissante à décroissante en a, f possède un maximum local en a.\nSi f passe de décroissante à croissante, f possède un minimum local.\n\n## Exemple\nf(x)=x²-4x+1.\nf'(x)=2x-4.\nf'(x)<0 pour x<2 et f'(x)>0 pour x>2.\nDonc f décroît sur ]-infini,2] puis croît sur [2,+infini[. Le minimum est f(2)=-3.\n\n## Méthode\n1. Calculer f'.\n2. Factoriser si possible.\n3. Étudier le signe de f'.\n4. Déduire les variations.\n5. Calculer les valeurs aux points importants.\n6. Construire le tableau de variations.",
+      "summary": "Construire un tableau de signes et de variations à partir de la dérivée.",
+      "content": "## Théorème\nSi f'(x)>0 sur un intervalle, f est strictement croissante.\nSi f'(x)<0, f est strictement décroissante.\n\n## Extremum\nUn changement de signe de f' de - vers + correspond à un minimum local.\nUn changement de signe de + vers - correspond à un maximum local.\n\n## Exemple\nf(x)=x²-4x+1.\nf'(x)=2x-4.\nf'<0 sur ]-infini,2[ et f'>0 sur ]2,+infini[.\nDonc f décroît puis croît et possède un minimum en x=2.\n\nf(2)=-3.",
       "keyFormulas": [
         "f'>0 => f croissante",
-        "f'<0 => f décroissante",
-        "f'=0 sur un intervalle => f constante"
+        "f'<0 => f décroissante"
       ],
       "tips": [
-        "Dans un tableau de signes, les zéros de la dérivée sont essentiels.",
-        "Un point où f'=0 n'est pas automatiquement un extremum."
+        "Construire le tableau de signes de f' avant le tableau de variations."
       ]
     },
     {
-      "id": "s2_maths_analyse_005",
+      "id": "s2_maths_accroissements_001",
       "subjectId": "MATHS",
-      "title": "Tangente à une courbe",
+      "title": "Inégalité des accroissements finis",
       "chapter": "Analyse",
-      "durationMinutes": 30,
-      "summary": "Déterminer et interpréter l'équation de la tangente.",
-      "content": "## Théorème\nSi f est dérivable en a, l'équation de la tangente à la courbe au point A(a,f(a)) est :\ny=f'(a)(x-a)+f(a).\n\nLe nombre f'(a) est le coefficient directeur de la tangente.\n\n## Exemple\nf(x)=x²-3x+1.\nf'(x)=2x-3.\nPour a=2 : f'(2)=1 et f(2)=-1.\nDonc la tangente est y=x-3.\n\n## Utilisation\nLa tangente permet d'obtenir une approximation locale de f(x) autour de a :\nf(x) environ f(a)+f'(a)(x-a).",
+      "durationMinutes": 40,
+      "summary": "Utiliser les majorations de dérivée pour contrôler les variations d'une fonction.",
+      "content": "## Principe\nSi f est dérivable sur un intervalle et si sa dérivée est bornée entre deux constantes m et M, on peut contrôler l'accroissement de f.\n\nLorsque m<=f'(x)<=M sur [a,b], on obtient :\nm(b-a)<=f(b)-f(a)<=M(b-a) pour a<b.\n\n## Application\nCette inégalité permet d'établir des majorations, des minorations et certains résultats de convergence.\n\n## Interprétation\nLa variation de f est contrôlée par les valeurs extrêmes de sa pente.",
       "keyFormulas": [
-        "y=f'(a)(x-a)+f(a)",
-        "Coefficient directeur = f'(a)"
+        "m<=f'<=M => m(b-a)<=f(b)-f(a)<=M(b-a)"
       ],
       "tips": [
-        "Calculer séparément f(a) et f'(a) avant d'écrire la tangente."
+        "Vérifier l'ordre des bornes m et M et l'ordre des points a et b."
       ]
     },
     {
-      "id": "s2_maths_analyse_006",
+      "id": "s2_maths_fonctions_004",
       "subjectId": "MATHS",
-      "title": "Fonction logarithme népérien",
+      "title": "Fonctions polynômes, rationnelles et trigonométriques",
       "chapter": "Fonctions usuelles",
       "durationMinutes": 50,
-      "summary": "Définition, propriétés, limites, dérivée, primitives et équations logarithmiques.",
-      "content": "## Définition\nLa fonction logarithme népérien ln est définie sur ]0,+infini[ et est la fonction réciproque de l'exponentielle.\n\nln(1)=0 et ln(e)=1.\n\n## Propriétés\nPour a>0 et b>0 :\nln(ab)=ln(a)+ln(b)\nln(a/b)=ln(a)-ln(b)\nln(a^r)=r ln(a).\n\n## Dérivée\n(ln x)'=1/x pour x>0.\n\nPlus généralement : [ln(f(x))]'=f'(x)/f(x) lorsque f(x)>0.\n\n## Limites usuelles\nlim(x->0+) ln x=-infini.\nlim(x->+infini) ln x=+infini.\nlim(x->0+) x^a ln x=0 pour a>0.\n\n## Équations\nln(x)=a équivaut à x=e^a.\nln(f(x))=ln(g(x)) équivaut à f(x)=g(x), à condition que f(x)>0 et g(x)>0.\n\n## Exemple\nln(x-1)=ln 4 implique x-1=4, donc x=5, qui appartient au domaine x>1.",
+      "summary": "Réviser les fonctions usuelles et leur étude globale.",
+      "content": "## Polynômes\nUn polynôme est défini sur R. Ses dérivées sont également des polynômes.\n\n## Fonctions rationnelles\nUne fonction rationnelle est un quotient de polynômes. Son domaine exclut les zéros du dénominateur.\n\n## Fonctions trigonométriques\nsin et cos sont définies sur R et périodiques de période 2pi.\n\n(sin x)'=cos x.\n(cos x)'=-sin x.\n\nLes fonctions trigonométriques permettent notamment de modéliser des phénomènes périodiques.\n\n## Étude globale\nPour une fonction, on peut étudier le domaine, les limites, les dérivées, les variations, les extrema, les asymptotes et la représentation graphique.",
+      "keyFormulas": [
+        "(sin x)'=cos x",
+        "(cos x)'=-sin x",
+        "sin(x+2pi)=sin x",
+        "cos(x+2pi)=cos x"
+      ],
+      "tips": [
+        "Pour une fonction rationnelle, commencer par factoriser le dénominateur lorsque cela facilite l'étude."
+      ]
+    },
+    {
+      "id": "s2_maths_puissances_001",
+      "subjectId": "MATHS",
+      "title": "Fonctions puissances",
+      "chapter": "Fonctions usuelles",
+      "durationMinutes": 40,
+      "summary": "Étudier les fonctions puissances d'exposant entier ou rationnel.",
+      "content": "## Définition\nLes fonctions puissances sont de la forme x^a, avec a entier ou rationnel dans le programme.\n\nPour x>0, on peut écrire :\nx^a=e^(a ln x).\n\n## Propriétés\nx^a x^b=x^(a+b).\n(x^a)^b=x^(ab).\nx^a/x^b=x^(a-b), lorsque les expressions sont définies.\n\n## Dérivée\nPour les valeurs où la formule est applicable :\n(x^a)'=a x^(a-1).\n\nLes fonctions puissances interviennent notamment dans les limites, les dérivées et les primitives.",
+      "keyFormulas": [
+        "x^a=e^(a ln x) pour x>0",
+        "(x^a)'=a x^(a-1)"
+      ],
+      "tips": [
+        "Pour un exposant rationnel, déterminer le domaine avec soin."
+      ]
+    },
+    {
+      "id": "s2_maths_ln_001",
+      "subjectId": "MATHS",
+      "title": "Logarithme népérien",
+      "chapter": "Fonctions usuelles",
+      "durationMinutes": 55,
+      "summary": "Étudier complètement la fonction logarithme népérien.",
+      "content": "## Définition\nln est définie sur ]0,+infini[ et vérifie ln(1)=0.\n\nElle est la fonction réciproque de l'exponentielle.\n\n## Propriétés\nln(ab)=ln(a)+ln(b).\nln(a/b)=ln(a)-ln(b).\nln(a^r)=rln(a) pour a>0.\n\n## Dérivée\n(ln x)'=1/x.\n\n## Limites\nlim(x->0+)ln(x)=-infini.\nlim(x->+infini)ln(x)=+infini.\nPour a>0, lim(x->+infini)ln(x)/x^a=0.\n\n## Équations\nln(x)=a équivaut à x=e^a.\nln(f(x))=ln(g(x)) équivaut à f(x)=g(x), sous les conditions de positivité.\n\n## Logarithme décimal\nLe logarithme décimal log est également utilisé dans certaines applications physiques et scientifiques.",
       "keyFormulas": [
         "ln(ab)=ln(a)+ln(b)",
         "ln(a/b)=ln(a)-ln(b)",
-        "ln(a^r)=rln(a)",
         "(ln x)'=1/x",
         "ln(e^x)=x",
         "e^(ln x)=x pour x>0"
       ],
       "tips": [
-        "Toujours écrire les conditions de positivité avant de résoudre une équation avec ln."
+        "Toujours écrire f(x)>0 avant d'utiliser ln(f(x))."
       ]
     },
     {
-      "id": "s2_maths_analyse_007",
+      "id": "s2_maths_exp_001",
       "subjectId": "MATHS",
       "title": "Fonction exponentielle",
       "chapter": "Fonctions usuelles",
-      "durationMinutes": 50,
-      "summary": "Étudier l'exponentielle, ses propriétés, limites, dérivée et équations.",
-      "content": "## Définition\nLa fonction exponentielle est la fonction réciproque du logarithme népérien. On note exp(x)=e^x.\n\n## Propriétés\nPour tous réels x et y :\ne^(x+y)=e^x e^y\ne^(-x)=1/e^x\ne^(x-y)=e^x/e^y.\n\n## Dérivée\n(e^x)'=e^x.\nPour une composée : (e^(f(x)))'=f'(x)e^(f(x)).\n\n## Variations\ne^x>0 pour tout x et e^x est strictement croissante sur R.\n\n## Limites\nlim(x->+infini)e^x=+infini.\nlim(x->-infini)e^x=0.\n\n## Limites importantes\nlim(x->0)(e^x-1)/x=1.\nPour tout entier naturel n non nul, lim(x->+infini)x^n/e^x=0.\n\n## Équation\ne^x=a possède une solution uniquement si a>0 et cette solution est x=ln(a).",
+      "durationMinutes": 55,
+      "summary": "Étudier la fonction exponentielle et ses principales limites.",
+      "content": "## Définition\nLa fonction exponentielle est la réciproque de ln et est notée exp(x)=e^x.\n\n## Propriétés\ne^(x+y)=e^x e^y.\ne^(-x)=1/e^x.\ne^(x-y)=e^x/e^y.\n\n## Dérivée\n(e^x)'=e^x.\n[e^(u(x))]'=u'(x)e^(u(x)).\n\n## Variations\ne^x>0 et exp est strictement croissante sur R.\n\n## Limites\nlim(x->+infini)e^x=+infini.\nlim(x->-infini)e^x=0.\n\n## Limites usuelles\nlim(x->0)(e^x-1)/x=1.\nPour tout entier naturel n non nul, lim(x->+infini)x^n/e^x=0.",
       "keyFormulas": [
-        "e^(x+y)=e^x e^y",
-        "e^(-x)=1/e^x",
+        "e^(x+y)=e^xe^y",
         "(e^x)'=e^x",
-        "(e^(f(x)))'=f'(x)e^(f(x))",
-        "e^(ln x)=x pour x>0"
+        "[e^u]'=u'e^u"
       ],
       "tips": [
-        "Une exponentielle est toujours strictement positive.",
-        "Pour comparer deux exponentielles, utiliser la croissance de exp."
+        "Une exponentielle est toujours strictement positive."
       ]
     },
     {
-      "id": "s2_maths_analyse_008",
-      "subjectId": "MATHS",
-      "title": "Fonction puissance",
-      "chapter": "Fonctions usuelles",
-      "durationMinutes": 35,
-      "summary": "Étudier les fonctions x puissance alpha et leurs propriétés utiles.",
-      "content": "## Définition\nPour certains exposants réels ou rationnels, on définit x^alpha sur le domaine approprié.\n\nPour alpha entier naturel, x^alpha est défini sur R.\nPour alpha rationnel, le domaine dépend de l'écriture de l'exposant et de la parité du dénominateur.\n\n## Propriétés\nLorsque les expressions sont définies :\nx^a x^b=x^(a+b)\n(x^a)^b=x^(ab)\nx^a/x^b=x^(a-b).\n\nPour x>0, on peut écrire x^a=e^(a ln x).\n\nCette relation permet de dériver certaines fonctions puissances : (x^a)'=a x^(a-1) lorsque la formule est applicable.",
-      "keyFormulas": [
-        "x^a=e^(a ln x) pour x>0",
-        "x^a x^b=x^(a+b)",
-        "(x^a)'=a x^(a-1)"
-      ],
-      "tips": [
-        "Pour les puissances rationnelles, déterminer soigneusement le domaine."
-      ]
-    },
-    {
-      "id": "s2_maths_analyse_009",
+      "id": "s2_maths_primitives_001",
       "subjectId": "MATHS",
       "title": "Primitives",
       "chapter": "Calcul intégral",
-      "durationMinutes": 45,
-      "summary": "Définition des primitives et techniques fondamentales de recherche.",
-      "content": "## Définition\nF est une primitive de f sur un intervalle I si F est dérivable sur I et F'(x)=f(x).\n\n## Théorème\nSi F est une primitive de f, toutes les primitives de f sont de la forme F(x)+C où C est une constante réelle.\n\n## Primitives usuelles\nUne primitive de x^n est x^(n+1)/(n+1) si n != -1.\nUne primitive de 1/x est ln|x| sur un intervalle ne contenant pas 0.\nUne primitive de e^x est e^x.\nUne primitive de cos x est sin x.\nUne primitive de sin x est -cos x.\n\n## Composées\nUne primitive de f'(x)(g(f(x))) peut être recherchée en reconnaissant une dérivée composée.\n\nExemple : une primitive de 2x e^(x²) est e^(x²).",
+      "durationMinutes": 50,
+      "summary": "Définir les primitives et savoir retrouver les primitives usuelles et composées.",
+      "content": "## Définition\nF est une primitive de f sur I si F'=f sur I.\n\nSi F est une primitive de f, toutes les primitives de f sont F+C.\n\n## Primitives usuelles\nPrimitive de x^n : x^(n+1)/(n+1)+C pour n!=-1.\nPrimitive de 1/x : ln|x|+C sur un intervalle ne contenant pas 0.\nPrimitive de e^x : e^x+C.\nPrimitive de cos x : sin x+C.\nPrimitive de sin x : -cos x+C.\n\n## Fonctions composées\nUne primitive de f'(x)[f(x)]^n est [f(x)]^(n+1)/(n+1) si n!=-1.\nUne primitive de f'(x)/f(x) est ln|f(x)|.\nUne primitive de f'(x)e^(f(x)) est e^(f(x)).",
       "keyFormulas": [
-        "F'=f => F primitive de f",
-        "∫x^n dx=x^(n+1)/(n+1)+C, n!=-1",
-        "∫1/x dx=ln|x|+C",
-        "∫e^x dx=e^x+C"
+        "F'=f",
+        "∫x^n dx=x^(n+1)/(n+1)+C",
+        "∫f'/f dx=ln|f|+C",
+        "∫f'e^f dx=e^f+C"
       ],
       "tips": [
-        "Toujours vérifier une primitive en la dérivant."
-      ]
-    },
-    {
-      "id": "s2_maths_analyse_010",
-      "subjectId": "MATHS",
-      "title": "Intégrale, aires et volumes",
-      "chapter": "Calcul intégral",
-      "durationMinutes": 55,
-      "summary": "Calculer des intégrales, des aires et certains volumes.",
-      "content": "## Définition\nSi f est continue sur [a,b] et F une primitive de f, alors :\n∫[a,b] f(x)dx=F(b)-F(a).\n\n## Linéarité\n∫(af+bg)=a∫f+b∫g.\n\n## Relation de Chasles\n∫[a,c]f=∫[a,b]f+∫[b,c]f.\n\n## Positivité\nSi f>=0 sur [a,b], alors ∫[a,b]f>=0.\nSi f<=g, alors ∫f<=∫g.\n\n## Aire\nSi f>=0 sur [a,b], l'aire comprise entre la courbe, l'axe des abscisses et les droites x=a et x=b vaut ∫[a,b]f(x)dx.\nSi f change de signe, il faut découper l'intervalle ou utiliser la valeur absolue.\n\n## Intégration par parties\n∫u v'=uv-∫u'v.\n\n## Volume\nPour un solide dont la section d'abscisse x possède une aire S(x) : V=∫[a,b]S(x)dx.\nPour la rotation de y=f(x)>=0 autour de l'axe des abscisses : V=π∫[a,b]f(x)²dx.",
-      "keyFormulas": [
-        "∫[a,b]f=F(b)-F(a)",
-        "∫(af+bg)=a∫f+b∫g",
-        "∫u v'=uv-∫u'v",
-        "V=∫S(x)dx",
-        "V=π∫f(x)²dx pour une rotation autour de Ox"
-      ],
-      "tips": [
-        "Avant de calculer une aire, vérifier le signe de la fonction.",
-        "Pour une intégration par parties, choisir u et v' de façon à simplifier l'intégrale restante."
+        "Toujours dériver la primitive obtenue pour vérifier."
       ]
     },
     {
       "id": "s2_maths_suites_001",
       "subjectId": "MATHS",
-      "title": "Suites numériques : rappels et suites arithmétiques",
+      "title": "Généralités sur les suites",
       "chapter": "Suites numériques",
       "durationMinutes": 45,
-      "summary": "Maîtriser les suites, les suites arithmétiques et leurs sommes.",
-      "content": "## Définition\nUne suite numérique est une fonction définie sur une partie de N et à valeurs réelles. On note généralement (u_n).\n\n## Suite arithmétique\nUne suite est arithmétique s'il existe une constante r telle que u_(n+1)=u_n+r.\n\nLe terme général est u_n=u_0+nr si le premier terme est u_0.\n\nSi elle commence à u_1 : u_n=u_1+(n-1)r.\n\n## Somme\nu_1+u_2+...+u_n=n(u_1+u_n)/2.\n\n## Variations\nSi r>0, la suite est croissante. Si r<0, elle est décroissante. Si r=0, elle est constante.\n\n## Exemple\nu_0=5 et r=3. Alors u_n=5+3n.",
+      "summary": "Étudier le sens de variation, les bornes, la périodicité et les représentations des suites.",
+      "content": "## Définition\nUne suite réelle est une fonction définie sur une partie de N à valeurs réelles.\n\n## Sens de variation\n(u_n) est croissante si u_(n+1)>=u_n.\nElle est décroissante si u_(n+1)<=u_n.\n\n## Suite bornée\nElle est majorée s'il existe M tel que u_n<=M pour tout n.\nElle est minorée s'il existe m tel que u_n>=m pour tout n.\n\n## Suite périodique\nIl existe p>0 tel que u_(n+p)=u_n.\n\n## Représentation\nOn représente les points (n,u_n).\n\n## Raisonnement par récurrence\nLe raisonnement par récurrence permet de démontrer qu'une propriété est vraie pour tous les rangs naturels.",
       "keyFormulas": [
-        "u_(n+1)=u_n+r",
-        "u_n=u_0+nr",
-        "Somme=n(premier terme+dernier terme)/2"
+        "Croissante : u_(n+1)>=u_n",
+        "Décroissante : u_(n+1)<=u_n"
       ],
       "tips": [
-        "Identifier la raison en calculant u_(n+1)-u_n."
+        "Pour étudier une variation, calculer u_(n+1)-u_n ou comparer u_(n+1) et u_n."
       ]
     },
     {
       "id": "s2_maths_suites_002",
       "subjectId": "MATHS",
-      "title": "Suites géométriques",
+      "title": "Suites arithmétiques",
       "chapter": "Suites numériques",
       "durationMinutes": 40,
-      "summary": "Étudier les suites géométriques et leurs sommes.",
-      "content": "## Définition\nUne suite est géométrique s'il existe un réel q tel que u_(n+1)=q u_n.\n\n## Terme général\nu_n=u_0 q^n.\n\n## Somme\nSi q!=1 : u_0+u_1+...+u_n=u_0(1-q^(n+1))/(1-q).\n\n## Variations\nLe comportement dépend du signe de u_0 et de q.\n\n## Limites\nSi |q|<1, q^n tend vers 0.\nSi q>1, q^n tend vers +infini.\nPour q=-1, la suite alterne et ne converge généralement pas.\n\n## Applications\nLes suites géométriques modélisent des phénomènes de croissance ou décroissance proportionnelle, par exemple une population ou un capital soumis à un taux constant.",
+      "summary": "Définition, terme général et somme d'une suite arithmétique.",
+      "content": "## Définition\nUne suite est arithmétique s'il existe une constante r telle que u_(n+1)=u_n+r.\n\nr est la raison.\n\n## Terme général\nSi le premier terme est u_0 : u_n=u_0+nr.\nSi le premier terme est u_1 : u_n=u_1+(n-1)r.\n\n## Somme\nLa somme de n termes consécutifs est égale au nombre de termes multiplié par la moyenne du premier et du dernier terme.\n\n## Variations\nr>0 : croissante.\nr<0 : décroissante.\nr=0 : constante.",
       "keyFormulas": [
-        "u_(n+1)=q u_n",
-        "u_n=u_0q^n",
-        "Somme=u_0(1-q^(n+1))/(1-q), q!=1"
+        "u_(n+1)=u_n+r",
+        "u_n=u_0+nr",
+        "S=n(u_1+u_n)/2"
       ],
       "tips": [
-        "Pour reconnaître une suite géométrique, calculer u_(n+1)/u_n lorsque le quotient est défini."
+        "La différence entre deux termes consécutifs est constante."
       ]
     },
     {
       "id": "s2_maths_suites_003",
       "subjectId": "MATHS",
-      "title": "Suites récurrentes et convergence",
+      "title": "Suites géométriques",
       "chapter": "Suites numériques",
-      "durationMinutes": 55,
-      "summary": "Étudier les suites récurrentes de type u_(n+1)=f(u_n).",
-      "content": "## Suite récurrente\nUne suite peut être définie par u_(n+1)=f(u_n) avec une valeur initiale u_0.\n\n## Sens de variation\nPour montrer que (u_n) est croissante, on peut étudier u_(n+1)-u_n.\nPour montrer qu'elle est décroissante, on peut montrer u_(n+1)-u_n<=0.\n\n## Théorème de convergence\nToute suite croissante et majorée converge.\nToute suite décroissante et minorée converge.\n\n## Limite d'une suite récurrente\nSi u_n converge vers L et si f est continue en L, alors L=f(L).\nAinsi la limite éventuelle se recherche parmi les solutions de l'équation x=f(x).\n\n## Représentation graphique\nPour u_(n+1)=f(u_n), on peut utiliser la courbe y=f(x) et la droite y=x pour visualiser les itérations.\n\n## Attention\nRésoudre L=f(L) donne les limites possibles mais ne suffit pas toujours à démontrer que la suite converge.",
+      "durationMinutes": 45,
+      "summary": "Définition, terme général, somme et convergence des suites géométriques.",
+      "content": "## Définition\nUne suite est géométrique s'il existe q tel que u_(n+1)=q u_n.\n\n## Terme général\nu_n=u_0q^n.\n\n## Somme\nPour q!=1 :\nS_n=u_0(1-q^(n+1))/(1-q).\n\n## Convergence\nSi |q|<1, q^n tend vers 0.\nSi q>1, q^n tend vers +infini.\nSi q=-1, la suite alterne et ne converge généralement pas.\n\nLes suites géométriques modélisent notamment les évolutions à taux constant.",
       "keyFormulas": [
-        "u_(n+1)=f(u_n)",
-        "Suite croissante et majorée => convergente",
-        "Suite décroissante et minorée => convergente",
-        "u_n->L et f continue => L=f(L)"
+        "u_(n+1)=qu_n",
+        "u_n=u_0q^n",
+        "S_n=u_0(1-q^(n+1))/(1-q)"
       ],
       "tips": [
-        "Séparer toujours deux étapes : démontrer la convergence puis déterminer la limite."
+        "Pour une suite géométrique, chercher le quotient u_(n+1)/u_n."
       ]
     },
     {
-      "id": "s2_maths_equations_001",
+      "id": "s2_maths_suites_004",
+      "subjectId": "MATHS",
+      "title": "Suites récurrentes et convergence",
+      "chapter": "Suites numériques",
+      "durationMinutes": 55,
+      "summary": "Étudier les suites de la forme u_(n+1)=f(u_n) et déterminer leur limite.",
+      "content": "## Suite récurrente\nOn considère u_(n+1)=f(u_n).\n\n## Convergence des suites monotones bornées\nToute suite croissante et majorée converge.\nToute suite décroissante et minorée converge.\n\n## Passage à la limite\nSi u_n tend vers L et si f est continue en L, alors :\nL=f(L).\n\n## Méthode\n1. Montrer que la suite reste dans un intervalle stable.\n2. Étudier son sens de variation.\n3. Montrer qu'elle est bornée.\n4. Conclure à la convergence.\n5. Résoudre L=f(L).\n\nLa résolution de L=f(L) seule ne suffit pas à démontrer la convergence.",
+      "keyFormulas": [
+        "u_(n+1)=f(u_n)",
+        "Croissante et majorée => convergente",
+        "Décroissante et minorée => convergente",
+        "u_n->L => L=f(L) si f est continue"
+      ],
+      "tips": [
+        "Séparer soigneusement la preuve de convergence et le calcul de la limite."
+      ]
+    },
+    {
+      "id": "s2_maths_integrales_001",
+      "subjectId": "MATHS",
+      "title": "Intégrale et propriétés",
+      "chapter": "Calcul intégral",
+      "durationMinutes": 50,
+      "summary": "Définir l'intégrale et utiliser linéarité, Chasles et les inégalités.",
+      "content": "## Définition\nPour une fonction continue f sur [a,b], l'intégrale est notée ∫[a,b]f(x)dx.\n\nSi F est une primitive de f :\n∫[a,b]f(x)dx=F(b)-F(a).\n\n## Linéarité\n∫(af+bg)=a∫f+b∫g.\n\n## Relation de Chasles\n∫[a,c]f=∫[a,b]f+∫[b,c]f.\n\n## Positivité\nSi f>=0, alors ∫f>=0.\n\n## Comparaison\nSi f<=g, alors ∫f<=∫g.\n\nSi m<=f(x)<=M sur [a,b], alors :\nm(b-a)<=∫[a,b]f(x)dx<=M(b-a).",
+      "keyFormulas": [
+        "∫[a,b]f=F(b)-F(a)",
+        "∫(af+bg)=a∫f+b∫g",
+        "∫[a,c]f=∫[a,b]f+∫[b,c]f"
+      ],
+      "tips": [
+        "Utiliser une primitive pour calculer exactement une intégrale."
+      ]
+    },
+    {
+      "id": "s2_maths_integrales_002",
+      "subjectId": "MATHS",
+      "title": "Aires et volumes par intégration",
+      "chapter": "Calcul intégral",
+      "durationMinutes": 50,
+      "summary": "Calculer des aires planes et des volumes à l'aide des intégrales.",
+      "content": "## Aire sous une courbe\nSi f>=0 sur [a,b], l'aire comprise entre la courbe, l'axe des abscisses et x=a,x=b vaut :\nA=∫[a,b]f(x)dx.\n\nSi f change de signe, il faut découper l'intervalle et tenir compte de la valeur absolue.\n\n## Aire entre deux courbes\nSi f>=g sur [a,b] :\nA=∫[a,b][f(x)-g(x)]dx.\n\n## Volume\nSi S(z) est l'aire d'une section du solide :\nV=∫[a,b]S(z)dz.\n\nPour une rotation autour de l'axe des abscisses :\nV=pi∫[a,b]f(x)^2dx lorsque la formule est applicable.\n\nLe programme prévoit également des applications aux centres d'inertie et moments d'inertie.",
+      "keyFormulas": [
+        "A=∫[a,b]f(x)dx si f>=0",
+        "A=∫[a,b](f-g)dx si f>=g",
+        "V=∫S(z)dz",
+        "V=pi∫f(x)^2dx"
+      ],
+      "tips": [
+        "Faire un schéma avant de calculer une aire ou un volume."
+      ]
+    },
+    {
+      "id": "s2_maths_integrales_003",
+      "subjectId": "MATHS",
+      "title": "Intégration par parties",
+      "chapter": "Calcul intégral",
+      "durationMinutes": 45,
+      "summary": "Utiliser l'intégration par parties pour transformer certaines intégrales.",
+      "content": "## Formule\nSi u et v sont suffisamment dérivables :\n∫u(x)v'(x)dx=u(x)v(x)-∫u'(x)v(x)dx.\n\nSur [a,b] :\n∫[a,b]u v'= [uv]_a^b - ∫[a,b]u'v.\n\n## Choix\nOn choisit généralement u de manière à ce que sa dérivée soit plus simple.\n\n## Exemple\nPour ∫x e^x dx, choisir u=x et v'=e^x.\nAlors u'=1 et v=e^x.\nDonc ∫x e^x dx=xe^x-∫e^xdx=xe^x-e^x+C.",
+      "keyFormulas": [
+        "∫u v'=uv-∫u'v",
+        "∫[a,b]u v'=[uv]_a^b-∫[a,b]u'v"
+      ],
+      "tips": [
+        "Après une intégration par parties, vérifier que la nouvelle intégrale est plus simple."
+      ]
+    },
+    {
+      "id": "s2_maths_edo_001",
       "subjectId": "MATHS",
       "title": "Équations différentielles linéaires du premier ordre",
       "chapter": "Équations différentielles",
       "durationMinutes": 55,
-      "summary": "Résoudre les équations différentielles linéaires simples prévues en Terminale S2.",
-      "content": "## Principe\nUne équation différentielle relie une fonction inconnue à ses dérivées.\n\nLe programme S2 vise principalement la résolution d'équations différentielles simples, notamment linéaires à coefficients constants.\n\n## Équation homogène\nPour y'=ay, les solutions sont y(x)=Ce^(ax), où C est une constante réelle.\n\n## Avec second membre\nPour y'-ay=b, où a et b sont constants, on cherche une solution particulière constante lorsque cela est possible puis on ajoute la solution générale de l'équation homogène.\n\n## Exemple\nRésoudre y'-2y=0.\nOn obtient y=Ce^(2x).\n\n## Conditions initiales\nSi une condition y(x_0)=y_0 est donnée, elle permet de déterminer C.\n\nCes équations ont des applications importantes en sciences physiques : croissance, décroissance radioactive, circuits électriques et phénomènes de refroidissement.",
+      "summary": "Résoudre les équations différentielles linéaires homogènes du premier ordre et celles avec second membre.",
+      "content": "## Équation homogène\nPour y'=ay, les solutions sont y=Ce^(ax).\n\n## Avec second membre constant\nPour y'-ay=b, on recherche une solution particulière puis on ajoute la solution générale de l'équation homogène.\n\n## Condition initiale\nUne condition y(x0)=y0 permet de déterminer C.\n\n## Exemple\nRésoudre y'-2y=0 avec y(0)=3.\nLa solution générale est y=Ce^(2x).\nLa condition initiale donne C=3.\nDonc y=3e^(2x).\n\nLes équations différentielles sont utilisées en lien avec les sciences physiques pour modéliser certains phénomènes.",
       "keyFormulas": [
         "y'=ay => y=Ce^(ax)",
-        "La condition initiale détermine la constante C"
+        "La condition initiale détermine C"
       ],
       "tips": [
-        "Toujours distinguer solution générale et solution vérifiant une condition initiale."
+        "Identifier d'abord l'équation homogène associée."
+      ]
+    },
+    {
+      "id": "s2_maths_edo_002",
+      "subjectId": "MATHS",
+      "title": "Équations différentielles du second ordre",
+      "chapter": "Équations différentielles",
+      "durationMinutes": 60,
+      "summary": "Résoudre les équations différentielles linéaires homogènes du second ordre à coefficients constants.",
+      "content": "## Forme\nOn considère des équations du type :\ny''+ay'+by=0.\n\n## Équation caractéristique\nOn associe l'équation :\nr²+ar+b=0.\n\n## Cas de deux racines réelles distinctes\nSi r1 et r2 sont distinctes :\ny=Ce^(r1x)+De^(r2x).\n\n## Cas d'une racine double\nSi r est une racine double :\ny=(C+Dx)e^(rx).\n\n## Cas de racines complexes\nSi les racines sont alpha+ib et alpha-ib :\ny=e^(alpha x)[C cos(bx)+D sin(bx)].\n\nLes constantes sont déterminées à partir des conditions initiales.",
+      "keyFormulas": [
+        "r²+ar+b=0",
+        "Deux racines réelles : y=Ce^(r1x)+De^(r2x)",
+        "Racine double : y=(C+Dx)e^(rx)",
+        "Racines alpha±ib : y=e^(alpha x)[Ccos(bx)+Dsin(bx)]"
+      ],
+      "tips": [
+        "Commencer par résoudre correctement l'équation caractéristique."
       ]
     },
     {
       "id": "s2_maths_complexes_001",
       "subjectId": "MATHS",
-      "title": "Nombres complexes : définition et vocabulaire",
-      "chapter": "Algèbre et géométrie",
+      "title": "Nombres complexes : forme algébrique",
+      "chapter": "Nombres complexes",
       "durationMinutes": 45,
-      "summary": "Définir les nombres complexes et maîtriser la forme algébrique.",
-      "content": "## Définition\nOn introduit le nombre i tel que i²=-1.\nTout nombre complexe s'écrit z=a+ib avec a et b réels.\n\na est la partie réelle : Re(z)=a.\nb est la partie imaginaire : Im(z)=b.\n\nDeux nombres complexes sont égaux si et seulement si leurs parties réelles et imaginaires sont respectivement égales.\n\n## Cas particuliers\nSi b=0, z est réel.\nSi a=0 et b!=0, z est imaginaire pur.\n\n## Puissances de i\ni^0=1, i^1=i, i²=-1, i³=-i et i^4=1. Le cycle recommence tous les quatre exposants.",
+      "summary": "Définir les nombres complexes et maîtriser la partie réelle et imaginaire.",
+      "content": "## Définition\nOn introduit i tel que i²=-1.\nTout complexe s'écrit z=a+ib avec a,b réels.\n\nRe(z)=a et Im(z)=b.\n\nSi b=0, z est réel.\nSi a=0 et b!=0, z est imaginaire pur.\n\n## Puissances de i\ni^0=1, i^1=i, i²=-1, i³=-i, i^4=1.\nLe cycle recommence tous les quatre exposants.\n\nDeux complexes sont égaux si leurs parties réelle et imaginaire sont égales.",
       "keyFormulas": [
         "z=a+ib",
         "Re(z)=a",
@@ -270,191 +421,262 @@
         "i²=-1"
       ],
       "tips": [
-        "Pour simplifier i^n, utiliser le reste de la division de n par 4."
+        "Réduire les puissances de i modulo 4."
       ]
     },
     {
       "id": "s2_maths_complexes_002",
       "subjectId": "MATHS",
-      "title": "Opérations et conjugué",
+      "title": "Opérations sur les nombres complexes",
       "chapter": "Nombres complexes",
       "durationMinutes": 50,
-      "summary": "Addition, multiplication, division et propriétés du conjugué.",
-      "content": "## Opérations\nSi z=a+ib et w=c+id :\nz+w=(a+c)+i(b+d).\nz-w=(a-c)+i(b-d).\n\nProduit : zw=(ac-bd)+i(ad+bc).\n\n## Conjugué\nLe conjugué de z=a+ib est z_barre=a-ib.\n\nPropriétés :\nconj(z+w)=conj(z)+conj(w)\nconj(zw)=conj(z)conj(w)\nz conj(z)=|z|².\n\n## Division\nPour calculer z/w avec w!=0, multiplier numérateur et dénominateur par le conjugué de w.\n\nExemple : (2+i)/(3-i). On multiplie par (3+i), puis on simplifie.",
+      "summary": "Additionner, soustraire, multiplier et diviser des complexes.",
+      "content": "## Addition\n(a+ib)+(c+id)=(a+c)+i(b+d).\n\n## Soustraction\n(a+ib)-(c+id)=(a-c)+i(b-d).\n\n## Produit\n(a+ib)(c+id)=(ac-bd)+i(ad+bc).\n\n## Division\nPour z/w avec w!=0, multiplier numérateur et dénominateur par le conjugué de w.\n\n## Exemple\n(2+i)/(3-i).\nOn multiplie par (3+i) :\n[(2+i)(3+i)]/10.\nLe numérateur vaut 5+5i.\nDonc le quotient vaut (1+i)/2.",
       "keyFormulas": [
-        "conj(a+ib)=a-ib",
-        "zconj(z)=a²+b²",
+        "(a+ib)(c+id)=(ac-bd)+i(ad+bc)",
         "z/w=zconj(w)/|w|²"
       ],
       "tips": [
-        "Pour diviser deux complexes sous forme algébrique, utiliser systématiquement le conjugué du dénominateur."
+        "Pour une division, rationaliser le dénominateur avec le conjugué."
       ]
     },
     {
       "id": "s2_maths_complexes_003",
       "subjectId": "MATHS",
-      "title": "Module et argument d'un nombre complexe",
+      "title": "Conjugué et module",
       "chapter": "Nombres complexes",
       "durationMinutes": 50,
-      "summary": "Calculer le module et l'argument et comprendre leur interprétation géométrique.",
-      "content": "## Module\nPour z=a+ib : |z|=sqrt(a²+b²).\n\nGéométriquement, |z| est la distance entre l'origine O et le point M d'affixe z.\n\n## Argument\nSi z!=0, un argument de z est un réel theta tel que :\nz=|z|(cos(theta)+i sin(theta)).\n\nLes arguments sont définis à 2pi près.\n\n## Propriétés\n|zw|=|z||w|.\n|z/w|=|z|/|w|.\narg(zw)=arg(z)+arg(w) modulo 2pi.\narg(z/w)=arg(z)-arg(w) modulo 2pi.\n\nLe quotient de deux affixes permet notamment d'étudier les angles et certaines configurations géométriques.",
+      "summary": "Calculer le conjugué et le module et utiliser leurs propriétés.",
+      "content": "## Conjugué\nSi z=a+ib, alors conj(z)=a-ib.\n\n## Propriétés\nconj(z+w)=conj(z)+conj(w).\nconj(zw)=conj(z)conj(w).\nzconj(z)=a²+b².\n\n## Module\n|z|=sqrt(a²+b²).\n\nGéométriquement, |z| est la distance entre l'origine et le point d'affixe z.\n\n## Distance\nPour A et B d'affixes z_A et z_B :\nAB=|z_B-z_A|.",
       "keyFormulas": [
+        "conj(a+ib)=a-ib",
+        "zconj(z)=|z|²",
         "|z|=sqrt(a²+b²)",
-        "|zw|=|z||w|",
-        "arg(zw)=arg(z)+arg(w) modulo 2pi"
+        "AB=|z_B-z_A|"
       ],
       "tips": [
-        "Pour déterminer un argument, tenir compte du quadrant du point dans le plan complexe."
+        "Le module est toujours positif ou nul."
       ]
     },
     {
       "id": "s2_maths_complexes_004",
       "subjectId": "MATHS",
-      "title": "Forme trigonométrique, formule de Moivre et Euler",
+      "title": "Argument et forme trigonométrique",
       "chapter": "Nombres complexes",
       "durationMinutes": 55,
-      "summary": "Passer entre formes algébrique et trigonométrique et calculer des puissances.",
-      "content": "## Forme trigonométrique\nTout complexe non nul s'écrit :\nz=r(cos(theta)+i sin(theta)) où r=|z|.\n\nOn a alors a=r cos(theta) et b=r sin(theta).\n\n## Formule de Moivre\n[cos(theta)+i sin(theta)]^n=cos(n theta)+i sin(n theta).\n\nDonc si z=r(cos(theta)+i sin(theta)), alors :\nz^n=r^n[cos(n theta)+i sin(n theta)].\n\n## Formule d'Euler\ne^(i theta)=cos(theta)+i sin(theta).\n\nElle permet d'écrire z=re^(i theta).\n\n## Applications\nLa forme trigonométrique simplifie les produits, quotients, puissances et recherches de racines.",
+      "summary": "Déterminer l'argument et passer de la forme algébrique à la forme trigonométrique.",
+      "content": "## Argument\nPour z!=0, un argument theta vérifie :\nz=|z|(cos(theta)+i sin(theta)).\n\nLes arguments diffèrent de multiples de 2pi.\n\n## Forme trigonométrique\nz=r(cos(theta)+i sin(theta)), avec r=|z|.\n\nAlors :\na=r cos(theta), b=r sin(theta).\n\n## Produit et quotient\narg(zw)=arg(z)+arg(w) modulo 2pi.\narg(z/w)=arg(z)-arg(w) modulo 2pi.\n\n|zw|=|z||w|.\n|z/w|=|z|/|w|.",
       "keyFormulas": [
         "z=r(cos(theta)+i sin(theta))",
-        "z=re^(i theta)",
-        "[cos(theta)+i sin(theta)]^n=cos(n theta)+i sin(n theta)",
-        "e^(i theta)=cos(theta)+i sin(theta)"
+        "arg(zw)=arg(z)+arg(w)",
+        "arg(z/w)=arg(z)-arg(w)"
       ],
       "tips": [
-        "Utiliser la forme algébrique pour additionner et la forme trigonométrique pour multiplier ou élever à une puissance."
+        "Tenir compte du quadrant pour choisir un argument adapté."
       ]
     },
     {
       "id": "s2_maths_complexes_005",
       "subjectId": "MATHS",
+      "title": "Formule de Moivre et formule d'Euler",
+      "chapter": "Nombres complexes",
+      "durationMinutes": 50,
+      "summary": "Calculer des puissances et simplifier des expressions trigonométriques.",
+      "content": "## Formule de Moivre\n[cos(theta)+i sin(theta)]^n=cos(n theta)+i sin(n theta).\n\nDonc si z=r(cos(theta)+i sin(theta)), alors :\nz^n=r^n[cos(n theta)+i sin(n theta)].\n\n## Formule d'Euler\ne^(i theta)=cos(theta)+i sin(theta).\n\nAinsi z=re^(i theta).\n\n## Applications\nCes formules permettent de calculer des puissances, résoudre certaines équations et établir des identités trigonométriques.",
+      "keyFormulas": [
+        "[cos(theta)+i sin(theta)]^n=cos(n theta)+i sin(n theta)",
+        "e^(i theta)=cos(theta)+i sin(theta)",
+        "z=re^(i theta)"
+      ],
+      "tips": [
+        "La forme trigonométrique est particulièrement efficace pour les produits et puissances."
+      ]
+    },
+    {
+      "id": "s2_maths_complexes_006",
+      "subjectId": "MATHS",
       "title": "Équations du second degré dans C",
       "chapter": "Nombres complexes",
-      "durationMinutes": 45,
-      "summary": "Résoudre les équations du second degré à coefficients réels ou complexes.",
-      "content": "## Équation ax²+bx+c=0\nPour a,b,c réels avec a!=0, on utilise le discriminant Delta=b²-4ac.\n\nSi Delta>0, deux racines réelles distinctes.\nSi Delta=0, une racine réelle double.\nSi Delta<0, les deux racines sont complexes conjuguées.\n\n## Exemple\nx²+4x+13=0.\nDelta=16-52=-36.\nsqrt(Delta)=6i.\nLes solutions sont x=(-4+6i)/2=-2+3i et x=-2-3i.\n\n## Factorisation\nDans C, tout polynôme du second degré à coefficients complexes possède deux racines comptées avec multiplicité.",
+      "durationMinutes": 50,
+      "summary": "Résoudre les équations du second degré dans l'ensemble des complexes.",
+      "content": "## Équation\nax²+bx+c=0 avec a!=0.\n\nDelta=b²-4ac.\n\nSi Delta>0 : deux solutions réelles.\nSi Delta=0 : une solution double.\nSi Delta<0 : deux solutions complexes conjuguées lorsque les coefficients sont réels.\n\n## Exemple\nx²+4x+13=0.\nDelta=-36.\nsqrt(Delta)=6i.\nDonc x=(-4±6i)/2.\nLes solutions sont -2+3i et -2-3i.",
       "keyFormulas": [
         "Delta=b²-4ac",
-        "x=(-b+sqrt(Delta))/(2a)",
-        "Si Delta<0, les racines sont complexes conjuguées pour a,b,c réels"
+        "x=(-b±sqrt(Delta))/(2a)"
       ],
       "tips": [
         "Lorsque Delta<0, écrire sqrt(Delta)=i sqrt(-Delta)."
       ]
     },
     {
-      "id": "s2_maths_complexes_006",
+      "id": "s2_maths_complexes_007",
       "subjectId": "MATHS",
-      "title": "Géométrie complexe et similitudes",
-      "chapter": "Algèbre et géométrie",
+      "title": "Racines n-ièmes",
+      "chapter": "Nombres complexes",
+      "durationMinutes": 50,
+      "summary": "Déterminer les racines n-ièmes d'un nombre complexe et les racines de l'unité.",
+      "content": "## Résolution de z^n=w\nSi w=r(cos(theta)+i sin(theta)), alors les solutions sont :\nz_k=r^(1/n)[cos((theta+2kpi)/n)+i sin((theta+2kpi)/n)], pour k=0,...,n-1.\n\n## Racines de l'unité\nLes solutions de z^n=1 sont :\nz_k=cos(2kpi/n)+i sin(2kpi/n).\n\nElles sont régulièrement réparties sur le cercle unité.",
+      "keyFormulas": [
+        "z_k=r^(1/n)[cos((theta+2kpi)/n)+i sin((theta+2kpi)/n)]",
+        "z_k=e^(2ikpi/n)"
+      ],
+      "tips": [
+        "Il existe n racines distinctes de l'unité d'ordre n."
+      ]
+    },
+    {
+      "id": "s2_maths_complexes_008",
+      "subjectId": "MATHS",
+      "title": "Géométrie complexe",
+      "chapter": "Nombres complexes",
       "durationMinutes": 55,
-      "summary": "Utiliser les complexes pour étudier distances, alignement, angles et similitudes directes.",
-      "content": "## Affixe\nDans le plan complexe, à tout point M correspond une affixe z.\nL'affixe du vecteur AB est z_B-z_A.\n\n## Distance\nAB=|z_B-z_A|.\n\n## Alignement\nPour A, B et C distincts, l'alignement peut être étudié avec le quotient (z_C-z_A)/(z_B-z_A). Si ce quotient est réel, les trois points sont alignés.\n\n## Angles\nL'argument du quotient (z_C-z_A)/(z_B-z_A) donne l'angle orienté entre les directions AB et AC modulo 2pi.\n\n## Similitude directe\nUne transformation de la forme z'=az+b avec a complexe non nul est une similitude directe.\nLe module de a donne le rapport de similitude et l'argument de a donne l'angle de rotation.",
+      "summary": "Utiliser les affixes pour étudier distances, alignement, angles et similitudes.",
+      "content": "## Affixe d'un vecteur\nL'affixe du vecteur AB est z_B-z_A.\n\n## Distance\nAB=|z_B-z_A|.\n\n## Alignement\nA,B,C sont alignés si (z_C-z_A)/(z_B-z_A) est réel lorsque le dénominateur est non nul.\n\n## Angles\nL'argument de (z_C-z_A)/(z_B-z_A) donne l'angle orienté entre les directions AB et AC.\n\n## Similitude directe\nUne transformation z'=az+b avec a!=0 est une similitude directe.\nLe module de a donne le rapport et l'argument de a donne l'angle.",
       "keyFormulas": [
         "AB=|z_B-z_A|",
         "Affixe de AB=z_B-z_A",
-        "z'=az+b, a!=0 : similitude directe",
-        "Module de a = rapport de similitude",
-        "Argument de a = angle de rotation"
+        "z'=az+b",
+        "Rapport=|a|",
+        "Angle=arg(a)"
       ],
       "tips": [
-        "Pour l'alignement, chercher à montrer qu'un quotient de complexes est réel."
-      ]
-    },
-    {
-      "id": "s2_maths_complexes_007",
-      "subjectId": "MATHS",
-      "title": "Racines n-ièmes et applications trigonométriques",
-      "chapter": "Nombres complexes",
-      "durationMinutes": 45,
-      "summary": "Déterminer les racines n-ièmes d'un complexe et utiliser les complexes en trigonométrie.",
-      "content": "## Racines n-ièmes\nOn cherche z tel que z^n=w.\nSi w=r(cos(theta)+i sin(theta)), les solutions sont :\nz_k=r^(1/n)[cos((theta+2kpi)/n)+i sin((theta+2kpi)/n)] pour k=0,...,n-1.\n\nIl existe exactement n racines distinctes si w!=0.\n\n## Racines de l'unité\nLes solutions de z^n=1 sont :\nz_k=cos(2kpi/n)+i sin(2kpi/n), k=0,...,n-1.\n\n## Linéarisation\nLes nombres complexes permettent de retrouver des identités trigonométriques en développant des puissances de cos(theta)+i sin(theta) et en identifiant les parties réelle et imaginaire.",
-      "keyFormulas": [
-        "z_k=r^(1/n)[cos((theta+2kpi)/n)+i sin((theta+2kpi)/n)]",
-        "Racines de l'unité : z_k=e^(2ikpi/n)"
-      ],
-      "tips": [
-        "Pour z^n=1, les racines sont régulièrement réparties sur le cercle unité."
-      ]
-    },
-    {
-      "id": "s2_maths_prob_001",
-      "subjectId": "MATHS",
-      "title": "Probabilités : événements et probabilités totales",
-      "chapter": "Probabilités",
-      "durationMinutes": 50,
-      "summary": "Maîtriser le vocabulaire probabiliste, l'indépendance et les probabilités totales.",
-      "content": "## Vocabulaire\nL'univers Omega est l'ensemble des résultats possibles d'une expérience aléatoire.\nUn événement est une partie de Omega.\n\nPour tout événement A : 0<=P(A)<=1.\nP(Omega)=1.\nP(A complémentaire)=1-P(A).\n\n## Probabilité conditionnelle\nSi P(B)>0 : P(A|B)=P(A intersection B)/P(B).\n\nDonc P(A intersection B)=P(B)P(A|B).\n\n## Indépendance\nA et B sont indépendants si P(A intersection B)=P(A)P(B).\n\n## Probabilités totales\nSi B1,...,Bn forment une partition de l'univers :\nP(A)=somme P(Bi)P(A|Bi).\n\nLes arbres pondérés permettent de représenter ces situations.",
-      "keyFormulas": [
-        "P(A complémentaire)=1-P(A)",
-        "P(A|B)=P(A intersection B)/P(B)",
-        "P(A intersection B)=P(B)P(A|B)",
-        "P(A)=somme P(Bi)P(A|Bi)"
-      ],
-      "tips": [
-        "Dans un arbre, multiplier les probabilités le long d'une branche et additionner les branches correspondant à l'événement recherché."
-      ]
-    },
-    {
-      "id": "s2_maths_prob_002",
-      "subjectId": "MATHS",
-      "title": "Variables aléatoires et loi binomiale",
-      "chapter": "Probabilités",
-      "durationMinutes": 55,
-      "summary": "Étudier une variable aléatoire, son espérance, sa variance et la loi binomiale.",
-      "content": "## Variable aléatoire\nUne variable aléatoire X associe un nombre réel à chaque résultat d'une expérience aléatoire.\n\nOn peut déterminer sa loi en donnant les valeurs possibles et les probabilités correspondantes.\n\n## Espérance\nE(X)=somme xi P(X=xi).\n\n## Variance\nV(X)=E(X²)-[E(X)]².\n\n## Écart-type\nsigma(X)=sqrt(V(X)).\n\n## Fonction de répartition\nF(x)=P(X<=x).\n\n## Loi binomiale\nSi X compte le nombre de succès lors de n épreuves indépendantes ayant chacune une probabilité p de succès, alors X suit la loi binomiale B(n,p).\n\nP(X=k)=C(n,k)p^k(1-p)^(n-k).\n\nE(X)=np.\nV(X)=np(1-p).\n\n## Exemple\nSi une épreuve est répétée 10 fois avec p=0,3, la variable donnant le nombre de succès suit B(10,0,3).",
-      "keyFormulas": [
-        "E(X)=somme xiP(X=xi)",
-        "V(X)=E(X²)-E(X)²",
-        "sigma=sqrt(V)",
-        "P(X=k)=C(n,k)p^k(1-p)^(n-k)",
-        "E(X)=np",
-        "V(X)=np(1-p)"
-      ],
-      "tips": [
-        "Vérifier que les épreuves sont indépendantes et que la probabilité de succès reste constante avant d'utiliser la loi binomiale."
+        "Pour montrer un alignement, essayer de rendre un quotient réel."
       ]
     },
     {
       "id": "s2_maths_stats_001",
       "subjectId": "MATHS",
       "title": "Statistiques à deux variables",
-      "chapter": "Organisation des données",
+      "chapter": "Statistiques",
       "durationMinutes": 55,
-      "summary": "Étudier une série statistique double, le nuage de points et le point moyen.",
-      "content": "## Série statistique double\nOn étudie deux caractères quantitatifs X et Y observés simultanément sur une population.\n\nLes couples (xi,yi) peuvent être représentés par un nuage de points.\n\n## Moyennes\nLa moyenne de X est x_barre=(somme n_i x_i)/N.\nLa moyenne de Y est y_barre=(somme n_i y_i)/N.\n\nLe point G(x_barre,y_barre) est appelé point moyen.\n\n## Variance\nV(X)=E(X²)-E(X)².\n\n## Covariance\ncov(X,Y)=E(XY)-E(X)E(Y).\n\nLa covariance mesure le sens de variation commune des deux caractères, mais son unité dépend des unités de X et Y.",
+      "summary": "Étudier une série statistique double et son nuage de points.",
+      "content": "## Série double\nOn observe deux caractères quantitatifs X et Y sur une même population.\n\nLes observations sont les couples (x_i,y_i).\n\n## Moyennes\nx_barre=(somme n_i x_i)/N.\ny_barre=(somme n_i y_i)/N.\n\nLe point G(x_barre,y_barre) est le point moyen.\n\n## Covariance\ncov(X,Y)=E(XY)-E(X)E(Y).\n\nElle mesure le sens de variation commune des deux variables.",
       "keyFormulas": [
         "x_barre=(somme n_i x_i)/N",
         "y_barre=(somme n_i y_i)/N",
-        "V(X)=E(X²)-E(X)²",
         "cov(X,Y)=E(XY)-E(X)E(Y)"
       ],
       "tips": [
-        "Toujours calculer l'effectif total avant les fréquences et moyennes pondérées."
+        "Commencer par organiser les données dans un tableau."
       ]
     },
     {
       "id": "s2_maths_stats_002",
       "subjectId": "MATHS",
-      "title": "Corrélation et régression linéaire",
-      "chapter": "Organisation des données",
+      "title": "Moindres carrés et droites de régression",
+      "chapter": "Statistiques",
       "durationMinutes": 60,
-      "summary": "Utiliser les moindres carrés, le coefficient de corrélation et les droites de régression.",
-      "content": "## Régression linéaire\nLorsque le nuage de points présente une tendance approximativement rectiligne, on peut chercher une droite d'ajustement.\n\nLa droite de régression de Y en X s'écrit y=ax+b.\nElle passe par le point moyen G(x_barre,y_barre).\n\nLe coefficient directeur est : a=cov(X,Y)/V(X), lorsque V(X)>0.\nPuis b=y_barre-a x_barre.\n\n## Régression de X en Y\nElle s'écrit x=a' y+b'.\n\n## Coefficient de corrélation\nr=cov(X,Y)/(sigma_X sigma_Y).\nOn a -1<=r<=1.\n\nUn coefficient proche de 1 indique une forte liaison linéaire positive ; proche de -1 une forte liaison linéaire négative ; proche de 0 une liaison linéaire faible. L'interprétation doit tenir compte du contexte et des données.\n\n## Prévision\nUne droite de régression peut être utilisée pour une estimation dans le domaine des données, avec prudence pour une extrapolation très éloignée.",
+      "summary": "Déterminer les droites de régression par la méthode des moindres carrés.",
+      "content": "## Régression de Y en X\nLa droite de régression s'écrit y=ax+b.\n\nElle passe par le point moyen G(x_barre,y_barre).\n\nLe coefficient directeur est :\na=cov(X,Y)/V(X), lorsque V(X)>0.\n\nPuis :\nb=y_barre-a x_barre.\n\n## Régression de X en Y\nElle s'écrit x=a'y+b'.\n\nCes droites permettent notamment d'effectuer des prévisions à partir d'une relation linéaire observée.",
       "keyFormulas": [
         "a=cov(X,Y)/V(X)",
         "b=y_barre-a x_barre",
-        "r=cov(X,Y)/(sigma_X sigma_Y)",
-        "-1<=r<=1",
-        "La droite de régression passe par G(x_barre,y_barre)"
+        "La droite passe par G(x_barre,y_barre)"
       ],
       "tips": [
-        "Ne pas confondre corrélation et causalité.",
-        "Une prévision très éloignée des données est une extrapolation et doit être interprétée avec prudence."
+        "Vérifier que le point moyen appartient à la droite calculée."
       ]
-    }
-  ],
-  "exercises": [
+    },
+    {
+      "id": "s2_maths_stats_003",
+      "subjectId": "MATHS",
+      "title": "Coefficient de corrélation linéaire",
+      "chapter": "Statistiques",
+      "durationMinutes": 45,
+      "summary": "Calculer et interpréter le coefficient de corrélation.",
+      "content": "## Définition\nLe coefficient de corrélation linéaire est :\nr=cov(X,Y)/(sigma_X sigma_Y).\n\nOn a -1<=r<=1.\n\nSi r est proche de 1, la liaison linéaire est fortement positive.\nSi r est proche de -1, elle est fortement négative.\nSi r est proche de 0, la liaison linéaire est faible.\n\n## Attention\nUne corrélation statistique ne suffit pas à établir une relation de cause à effet.\n\n## Prévision\nLes droites de régression peuvent servir à effectuer des estimations, notamment lorsque la relation linéaire est forte.",
+      "keyFormulas": [
+        "r=cov(X,Y)/(sigma_X sigma_Y)",
+        "-1<=r<=1"
+      ],
+      "tips": [
+        "Toujours interpréter r dans le contexte des données."
+      ]
+    },
+    {
+      "id": "s2_maths_prob_001",
+      "subjectId": "MATHS",
+      "title": "Probabilités et événements",
+      "chapter": "Probabilités",
+      "durationMinutes": 45,
+      "summary": "Maîtriser le vocabulaire probabiliste et les propriétés fondamentales.",
+      "content": "## Vocabulaire\nOmega est l'univers des résultats possibles.\nUn événement est une partie de Omega.\nUn événement élémentaire contient un seul résultat.\n\n## Propriétés\n0<=P(A)<=1.\nP(Omega)=1.\nP(A complémentaire)=1-P(A).\n\n## Réunion\nP(A union B)=P(A)+P(B)-P(A intersection B).\n\nSi A et B sont incompatibles :\nP(A union B)=P(A)+P(B).\n\n## Équiprobabilité\nSi les N résultats sont équiprobables :\nP(A)=nombre de résultats favorables/N.",
+      "keyFormulas": [
+        "P(A complémentaire)=1-P(A)",
+        "P(A union B)=P(A)+P(B)-P(A intersection B)",
+        "Équiprobabilité : P(A)=favorables/total"
+      ],
+      "tips": [
+        "Distinguer soigneusement incompatibilité et indépendance."
+      ]
+    },
+    {
+      "id": "s2_maths_prob_002",
+      "subjectId": "MATHS",
+      "title": "Probabilité conditionnelle et indépendance",
+      "chapter": "Probabilités",
+      "durationMinutes": 50,
+      "summary": "Calculer des probabilités conditionnelles et reconnaître l'indépendance.",
+      "content": "## Probabilité conditionnelle\nSi P(B)>0 :\nP(A|B)=P(A intersection B)/P(B).\n\nDonc :\nP(A intersection B)=P(B)P(A|B).\n\n## Indépendance\nA et B sont indépendants si :\nP(A intersection B)=P(A)P(B).\n\nÉquivalent, lorsque les probabilités sont définies :\nP(A|B)=P(A).\n\nLes arbres pondérés permettent de représenter les probabilités conditionnelles.",
+      "keyFormulas": [
+        "P(A|B)=P(A intersection B)/P(B)",
+        "P(A intersection B)=P(B)P(A|B)",
+        "Indépendance : P(A intersection B)=P(A)P(B)"
+      ],
+      "tips": [
+        "Dans un arbre, multiplier le long d'une branche et additionner les branches correspondant à l'événement recherché."
+      ]
+    },
+    {
+      "id": "s2_maths_prob_003",
+      "subjectId": "MATHS",
+      "title": "Probabilités totales",
+      "chapter": "Probabilités",
+      "durationMinutes": 45,
+      "summary": "Utiliser une partition de l'univers pour calculer une probabilité.",
+      "content": "## Formule\nSi B1,...,Bn forment une partition de l'univers, alors :\nP(A)=somme P(Bi)P(A|Bi).\n\n## Exemple\nUne population est composée de 60% du groupe A et 40% du groupe B.\nUne maladie touche 2% du groupe A et 5% du groupe B.\nAlors :\nP(M)=0,6*0,02+0,4*0,05=0,032.\n\nLa probabilité de maladie est donc 3,2%.",
+      "keyFormulas": [
+        "P(A)=somme P(Bi)P(A|Bi)"
+      ],
+      "tips": [
+        "Vérifier que les événements Bi forment bien une partition."
+      ]
+    },
+    {
+      "id": "s2_maths_prob_004",
+      "subjectId": "MATHS",
+      "title": "Variables aléatoires",
+      "chapter": "Probabilités",
+      "durationMinutes": 55,
+      "summary": "Définir une variable aléatoire, sa loi et sa fonction de répartition.",
+      "content": "## Définition\nUne variable aléatoire X associe un nombre réel à chaque résultat d'une expérience aléatoire.\n\n## Loi\nLa loi de X donne les probabilités P(X=x_i).\n\nLa somme de toutes les probabilités vaut 1.\n\n## Fonction de répartition\nF(x)=P(X<=x).\n\n## Espérance\nE(X)=somme x_iP(X=x_i).\n\n## Variance\nV(X)=E(X²)-[E(X)]².\n\n## Écart-type\nsigma(X)=sqrt(V(X)).",
+      "keyFormulas": [
+        "E(X)=somme x_iP(X=x_i)",
+        "V(X)=E(X²)-E(X)²",
+        "sigma(X)=sqrt(V(X))",
+        "F(x)=P(X<=x)"
+      ],
+      "tips": [
+        "Vérifier que la somme des probabilités de la loi vaut 1."
+      ]
+    },
+    {
+      "id": "s2_maths_prob_005",
+      "subjectId": "MATHS",
+      "title": "Loi binomiale",
+      "chapter": "Probabilités",
+      "durationMinutes": 55,
+      "summary": "Identifier et utiliser la loi binomiale.",
+      "content": "## Situation binomiale\nOn répète n fois une même épreuve indépendante ayant deux issues : succès ou échec.\nLa probabilité de succès est p.\n\nX, nombre de succès, suit la loi binomiale B(n,p).\n\n## Probabilité\nP(X=k)=C(n,k)p^k(1-p)^(n-k).\n\n## Espérance\nE(X)=np.\n\n## Variance\nV(X)=np(1-p).\n\n## Exemple\nSi une épreuve est répétée 10 fois avec p=0,3, alors X suit B(10,0,3).",
+      "keyFormulas": [
+        "P(X=k)=C(n,k)p^k(1-p)^(n-k)",
+        "E(X)=np",
+        "V(X)=np(1-p)"
+      ],
+      "tips": [
+        "Vérifier indépendance, nombre fixe d'épreuves et probabilité constante avant d'utiliser la loi binomiale."
+      ]
+    },
     {
       "id": "s2_maths_ex_001",
       "subjectId": "MATHS",
@@ -465,7 +687,7 @@
       "questions": [
         {
           "id": "s2_maths_q_001",
-          "question": "Quelle condition impose la racine carrée ?",
+          "question": "Quelle condition impose la racine ?",
           "options": [
             "x-2>=0",
             "x-2>0",
@@ -473,38 +695,67 @@
             "x-2<=0"
           ],
           "correctIndex": 0,
-          "explanation": "Une racine carrée réelle impose que son radicand soit positif ou nul."
+          "explanation": "Le radicand d'une racine carrée doit être positif ou nul."
         },
         {
           "id": "s2_maths_q_002",
-          "question": "Quel est le domaine ?",
+          "question": "Quelle valeur faut-il exclure ?",
           "options": [
-            "[2,+infini[",
-            "]2,+infini[",
-            "[2,5[",
-            "R"
+            "2",
+            "3",
+            "4",
+            "5"
           ],
-          "correctIndex": 0,
-          "explanation": "Il faut x>=2 et x!=5. Le domaine est donc [2,+infini[ privé de 5."
+          "correctIndex": 3,
+          "explanation": "Le dénominateur x-5 ne doit pas être nul, donc x=5 est exclu."
         }
       ],
       "solutionSteps": [
-        "Condition de la racine : x>=2.",
-        "Condition du dénominateur : x!=5.",
+        "x-2>=0 donne x>=2.",
+        "x-5!=0 donne x!=5.",
         "Donc Df=[2,+infini[ privé de {5}."
       ]
     },
     {
       "id": "s2_maths_ex_002",
       "subjectId": "MATHS",
-      "title": "Variations d'une fonction",
+      "title": "Continuité et racine",
+      "chapter": "Analyse",
+      "difficulty": "Moyen",
+      "statement": "Soit f(x)=x²-2. Montrer que l'équation f(x)=0 possède une solution dans [1,2].",
+      "questions": [
+        {
+          "id": "s2_maths_q_003",
+          "question": "Quelle propriété permet de conclure à l'existence d'une racine ?",
+          "options": [
+            "Le théorème des valeurs intermédiaires",
+            "La formule de Moivre",
+            "La loi binomiale",
+            "La relation de Chasles"
+          ],
+          "correctIndex": 0,
+          "explanation": "f est continue et f(1)=-1, f(2)=2 : les valeurs sont de signes contraires."
+        }
+      ],
+      "solutionSteps": [
+        "f est un polynôme, donc elle est continue sur [1,2].",
+        "f(1)=-1.",
+        "f(2)=2.",
+        "0 est compris entre -1 et 2.",
+        "Le théorème des valeurs intermédiaires garantit donc une solution dans [1,2]."
+      ]
+    },
+    {
+      "id": "s2_maths_ex_003",
+      "subjectId": "MATHS",
+      "title": "Variations",
       "chapter": "Analyse",
       "difficulty": "Moyen",
       "statement": "Soit f(x)=x²-4x+1. Étudier ses variations.",
       "questions": [
         {
-          "id": "s2_maths_q_003",
-          "question": "Quelle est la dérivée de f ?",
+          "id": "s2_maths_q_004",
+          "question": "Quelle est la dérivée ?",
           "options": [
             "2x-4",
             "x-4",
@@ -512,11 +763,11 @@
             "x²-4"
           ],
           "correctIndex": 0,
-          "explanation": "La dérivée de x² est 2x et celle de -4x est -4."
+          "explanation": "f'(x)=2x-4."
         },
         {
-          "id": "s2_maths_q_004",
-          "question": "Où f atteint-elle son minimum ?",
+          "id": "s2_maths_q_005",
+          "question": "Où se trouve le minimum ?",
           "options": [
             "x=0",
             "x=1",
@@ -524,20 +775,19 @@
             "x=4"
           ],
           "correctIndex": 2,
-          "explanation": "f'(x)=2x-4 s'annule en x=2 et passe de négatif à positif."
+          "explanation": "La dérivée s'annule en x=2 et change de négative à positive."
         }
       ],
       "solutionSteps": [
         "f'(x)=2x-4.",
-        "f'(x)<0 si x<2.",
-        "f'(x)>0 si x>2.",
-        "f décroît sur ]-infini,2] puis croît sur [2,+infini[.",
-        "f(2)=4-8+1=-3.",
-        "Le minimum est donc -3."
+        "f'<0 pour x<2.",
+        "f'>0 pour x>2.",
+        "f décroît puis croît.",
+        "Le minimum est f(2)=-3."
       ]
     },
     {
-      "id": "s2_maths_ex_003",
+      "id": "s2_maths_ex_004",
       "subjectId": "MATHS",
       "title": "Tangente",
       "chapter": "Analyse",
@@ -545,7 +795,7 @@
       "statement": "Déterminer la tangente à f(x)=x²-3x+1 au point d'abscisse 2.",
       "questions": [
         {
-          "id": "s2_maths_q_005",
+          "id": "s2_maths_q_006",
           "question": "Quelle est l'équation de la tangente ?",
           "options": [
             "y=x-3",
@@ -554,27 +804,27 @@
             "y=2x+1"
           ],
           "correctIndex": 0,
-          "explanation": "f'(x)=2x-3, donc f'(2)=1 et f(2)=-1. La tangente est y=x-3."
+          "explanation": "f'(2)=1 et f(2)=-1. Donc y=x-3."
         }
       ],
       "solutionSteps": [
         "f'(x)=2x-3.",
         "f'(2)=1.",
-        "f(2)=4-6+1=-1.",
+        "f(2)=-1.",
         "y=f'(2)(x-2)+f(2).",
         "Donc y=x-3."
       ]
     },
     {
-      "id": "s2_maths_ex_004",
+      "id": "s2_maths_ex_005",
       "subjectId": "MATHS",
-      "title": "Équation logarithmique",
+      "title": "Logarithme",
       "chapter": "Fonctions usuelles",
       "difficulty": "Facile",
       "statement": "Résoudre ln(x-1)=ln(4).",
       "questions": [
         {
-          "id": "s2_maths_q_006",
+          "id": "s2_maths_q_007",
           "question": "Quelle est la solution ?",
           "options": [
             "x=3",
@@ -583,18 +833,18 @@
             "x=6"
           ],
           "correctIndex": 2,
-          "explanation": "Sur le domaine x>1, ln(x-1)=ln4 implique x-1=4, donc x=5."
+          "explanation": "Le domaine impose x>1. L'injectivité de ln donne x-1=4, donc x=5."
         }
       ],
       "solutionSteps": [
-        "Domaine : x-1>0 donc x>1.",
-        "La fonction ln est injective.",
+        "Domaine : x>1.",
+        "ln est injective.",
         "x-1=4.",
-        "Donc x=5."
+        "x=5."
       ]
     },
     {
-      "id": "s2_maths_ex_005",
+      "id": "s2_maths_ex_006",
       "subjectId": "MATHS",
       "title": "Intégrale",
       "chapter": "Calcul intégral",
@@ -602,8 +852,8 @@
       "statement": "Calculer I=∫[0,2](3x²+2x)dx.",
       "questions": [
         {
-          "id": "s2_maths_q_007",
-          "question": "Quelle est une primitive de 3x²+2x ?",
+          "id": "s2_maths_q_008",
+          "question": "Quelle est une primitive ?",
           "options": [
             "x³+x²",
             "3x³+x²",
@@ -615,24 +865,22 @@
         }
       ],
       "solutionSteps": [
-        "Une primitive est F(x)=x³+x².",
+        "F(x)=x³+x².",
         "I=F(2)-F(0).",
-        "F(2)=8+4=12.",
-        "F(0)=0.",
-        "Donc I=12."
+        "I=12."
       ]
     },
     {
-      "id": "s2_maths_ex_006",
+      "id": "s2_maths_ex_007",
       "subjectId": "MATHS",
       "title": "Suite arithmétique",
       "chapter": "Suites numériques",
       "difficulty": "Facile",
-      "statement": "Une suite vérifie u_0=5 et u_(n+1)=u_n+3. Déterminer u_n.",
+      "statement": "u_0=5 et u_(n+1)=u_n+3. Déterminer u_n.",
       "questions": [
         {
-          "id": "s2_maths_q_008",
-          "question": "Quelle expression donne u_n ?",
+          "id": "s2_maths_q_009",
+          "question": "Quelle est l'expression de u_n ?",
           "options": [
             "5+3n",
             "5n+3",
@@ -640,25 +888,26 @@
             "5*3^n"
           ],
           "correctIndex": 0,
-          "explanation": "La suite est arithmétique de premier terme 5 et de raison 3."
+          "explanation": "La suite est arithmétique de raison 3."
         }
       ],
       "solutionSteps": [
-        "La raison est r=3.",
-        "Pour une suite arithmétique u_n=u_0+nr.",
+        "u_0=5.",
+        "r=3.",
+        "u_n=u_0+nr.",
         "Donc u_n=5+3n."
       ]
     },
     {
-      "id": "s2_maths_ex_007",
+      "id": "s2_maths_ex_008",
       "subjectId": "MATHS",
-      "title": "Suite récurrente",
+      "title": "Suite récurrente et limite",
       "chapter": "Suites numériques",
       "difficulty": "Difficile",
-      "statement": "On considère une suite définie par u_(n+1)=f(u_n). Si elle converge vers L et si f est continue en L, déterminer l'équation vérifiée par L.",
+      "statement": "Une suite vérifie u_(n+1)=f(u_n). Si elle converge vers L et si f est continue en L, quelle équation vérifie L ?",
       "questions": [
         {
-          "id": "s2_maths_q_009",
+          "id": "s2_maths_q_010",
           "question": "Quelle relation vérifie L ?",
           "options": [
             "L=f(L)",
@@ -667,26 +916,26 @@
             "L=f(L)+1"
           ],
           "correctIndex": 0,
-          "explanation": "En passant à la limite dans u_(n+1)=f(u_n), la continuité donne L=f(L)."
+          "explanation": "Le passage à la limite dans u_(n+1)=f(u_n) donne L=f(L)."
         }
       ],
       "solutionSteps": [
         "u_n tend vers L.",
-        "Alors u_(n+1) tend également vers L.",
-        "Par continuité, f(u_n) tend vers f(L).",
-        "Comme u_(n+1)=f(u_n), on obtient L=f(L)."
+        "u_(n+1) tend aussi vers L.",
+        "f(u_n) tend vers f(L) par continuité.",
+        "Donc L=f(L)."
       ]
     },
     {
-      "id": "s2_maths_ex_008",
+      "id": "s2_maths_ex_009",
       "subjectId": "MATHS",
-      "title": "Équation différentielle",
+      "title": "Équation différentielle du premier ordre",
       "chapter": "Équations différentielles",
       "difficulty": "Moyen",
       "statement": "Résoudre y'=2y avec y(0)=3.",
       "questions": [
         {
-          "id": "s2_maths_q_010",
+          "id": "s2_maths_q_011",
           "question": "Quelle est la solution ?",
           "options": [
             "y=3e^(2x)",
@@ -699,13 +948,41 @@
         }
       ],
       "solutionSteps": [
-        "La solution générale de y'=2y est y=Ce^(2x).",
+        "y=Ce^(2x).",
         "y(0)=C=3.",
         "Donc y=3e^(2x)."
       ]
     },
     {
-      "id": "s2_maths_ex_009",
+      "id": "s2_maths_ex_010",
+      "subjectId": "MATHS",
+      "title": "Équation différentielle du second ordre",
+      "chapter": "Équations différentielles",
+      "difficulty": "Difficile",
+      "statement": "Résoudre y''-3y'+2y=0.",
+      "questions": [
+        {
+          "id": "s2_maths_q_012",
+          "question": "Quelles sont les racines de l'équation caractéristique ?",
+          "options": [
+            "1 et 2",
+            "-1 et -2",
+            "2 et 3",
+            "0 et 2"
+          ],
+          "correctIndex": 0,
+          "explanation": "r²-3r+2=(r-1)(r-2), donc r=1 et r=2."
+        }
+      ],
+      "solutionSteps": [
+        "Équation caractéristique : r²-3r+2=0.",
+        "Factorisation : (r-1)(r-2)=0.",
+        "Racines : 1 et 2.",
+        "Solution générale : y=Ce^x+De^(2x)."
+      ]
+    },
+    {
+      "id": "s2_maths_ex_011",
       "subjectId": "MATHS",
       "title": "Nombre complexe",
       "chapter": "Nombres complexes",
@@ -713,8 +990,8 @@
       "statement": "Soit z=4-7i.",
       "questions": [
         {
-          "id": "s2_maths_q_011",
-          "question": "Quelle est la partie réelle de z ?",
+          "id": "s2_maths_q_013",
+          "question": "Quelle est Re(z) ?",
           "options": [
             "4",
             "-7",
@@ -725,8 +1002,8 @@
           "explanation": "Dans z=a+ib, la partie réelle est a."
         },
         {
-          "id": "s2_maths_q_012",
-          "question": "Quelle est la partie imaginaire de z ?",
+          "id": "s2_maths_q_014",
+          "question": "Quelle est Im(z) ?",
           "options": [
             "4",
             "-7",
@@ -734,17 +1011,16 @@
             "-4"
           ],
           "correctIndex": 1,
-          "explanation": "Dans z=a+ib, la partie imaginaire est b=-7."
+          "explanation": "La partie imaginaire est b=-7."
         }
       ],
       "solutionSteps": [
-        "Comparer z=4-7i avec z=a+ib.",
-        "On obtient a=4 et b=-7.",
+        "z=4-7i.",
         "Donc Re(z)=4 et Im(z)=-7."
       ]
     },
     {
-      "id": "s2_maths_ex_010",
+      "id": "s2_maths_ex_012",
       "subjectId": "MATHS",
       "title": "Module d'un complexe",
       "chapter": "Nombres complexes",
@@ -752,7 +1028,7 @@
       "statement": "Calculer le module de z=3+4i.",
       "questions": [
         {
-          "id": "s2_maths_q_013",
+          "id": "s2_maths_q_015",
           "question": "Quelle est la valeur de |z| ?",
           "options": [
             "3",
@@ -761,17 +1037,44 @@
             "7"
           ],
           "correctIndex": 2,
-          "explanation": "|z|=sqrt(3²+4²)=sqrt(25)=5."
+          "explanation": "|z|=sqrt(3²+4²)=5."
         }
       ],
       "solutionSteps": [
-        "|z|=sqrt(a²+b²).",
         "|z|=sqrt(3²+4²).",
         "|z|=sqrt(25)=5."
       ]
     },
     {
-      "id": "s2_maths_ex_011",
+      "id": "s2_maths_ex_013",
+      "subjectId": "MATHS",
+      "title": "Division de complexes",
+      "chapter": "Nombres complexes",
+      "difficulty": "Moyen",
+      "statement": "Calculer (2+i)/(3-i).",
+      "questions": [
+        {
+          "id": "s2_maths_q_016",
+          "question": "Quel est le résultat ?",
+          "options": [
+            "(1+i)/2",
+            "1+i",
+            "(5+5i)/3",
+            "2-i"
+          ],
+          "correctIndex": 0,
+          "explanation": "En multipliant par le conjugué 3+i, on obtient (5+5i)/10=(1+i)/2."
+        }
+      ],
+      "solutionSteps": [
+        "Multiplier numérateur et dénominateur par 3+i.",
+        "Numérateur : (2+i)(3+i)=5+5i.",
+        "Dénominateur : (3-i)(3+i)=10.",
+        "Résultat : (1+i)/2."
+      ]
+    },
+    {
+      "id": "s2_maths_ex_014",
       "subjectId": "MATHS",
       "title": "Équation du second degré dans C",
       "chapter": "Nombres complexes",
@@ -779,7 +1082,7 @@
       "statement": "Résoudre x²+4x+13=0 dans C.",
       "questions": [
         {
-          "id": "s2_maths_q_014",
+          "id": "s2_maths_q_017",
           "question": "Quelles sont les solutions ?",
           "options": [
             "-2+3i et -2-3i",
@@ -788,26 +1091,26 @@
             "2+i et 2-i"
           ],
           "correctIndex": 0,
-          "explanation": "Delta=16-52=-36, donc les racines sont (-4±6i)/2=-2±3i."
+          "explanation": "Delta=-36, donc les racines sont -2+3i et -2-3i."
         }
       ],
       "solutionSteps": [
-        "Delta=4²-4*1*13=-36.",
+        "Delta=16-52=-36.",
         "sqrt(Delta)=6i.",
         "x=(-4±6i)/2.",
         "Donc x1=-2+3i et x2=-2-3i."
       ]
     },
     {
-      "id": "s2_maths_ex_012",
+      "id": "s2_maths_ex_015",
       "subjectId": "MATHS",
       "title": "Alignement dans le plan complexe",
-      "chapter": "Algèbre et géométrie",
+      "chapter": "Nombres complexes",
       "difficulty": "Difficile",
-      "statement": "On considère trois points d'affixes z_A=1, z_B=3 et z_C=5. Étudier leur alignement.",
+      "statement": "A, B et C ont pour affixes respectives 1, 3 et 5. Étudier leur alignement.",
       "questions": [
         {
-          "id": "s2_maths_q_015",
+          "id": "s2_maths_q_018",
           "question": "Les trois points sont-ils alignés ?",
           "options": [
             "Oui",
@@ -816,27 +1119,26 @@
             "Seulement si les affixes sont imaginaires"
           ],
           "correctIndex": 0,
-          "explanation": "(z_C-z_A)/(z_B-z_A)=(5-1)/(3-1)=2, qui est réel. Les points sont donc alignés."
+          "explanation": "(5-1)/(3-1)=2, qui est réel. Les trois points sont donc alignés."
         }
       ],
       "solutionSteps": [
-        "Calculer z_C-z_A=4.",
-        "Calculer z_B-z_A=2.",
-        "Le quotient vaut 4/2=2.",
-        "Ce quotient est réel.",
+        "Calculer (z_C-z_A)/(z_B-z_A).",
+        "On obtient 4/2=2.",
+        "Le quotient est réel.",
         "Donc A, B et C sont alignés."
       ]
     },
     {
-      "id": "s2_maths_ex_013",
+      "id": "s2_maths_ex_016",
       "subjectId": "MATHS",
       "title": "Probabilité totale",
       "chapter": "Probabilités",
       "difficulty": "Moyen",
-      "statement": "Une population est composée de 60% de personnes du groupe A et 40% du groupe B. Une maladie touche 2% du groupe A et 5% du groupe B. Calculer la probabilité qu'une personne choisie au hasard soit malade.",
+      "statement": "60% d'une population appartient au groupe A et 40% au groupe B. Une maladie touche 2% du groupe A et 5% du groupe B. Calculer la probabilité qu'une personne soit malade.",
       "questions": [
         {
-          "id": "s2_maths_q_016",
+          "id": "s2_maths_q_019",
           "question": "Quelle est la probabilité de maladie ?",
           "options": [
             "0,02",
@@ -845,27 +1147,26 @@
             "0,05"
           ],
           "correctIndex": 1,
-          "explanation": "P(M)=0,6*0,02+0,4*0,05=0,012+0,020=0,032."
+          "explanation": "P(M)=0,6*0,02+0,4*0,05=0,032."
         }
       ],
       "solutionSteps": [
-        "Utiliser la formule des probabilités totales.",
         "P(M)=P(A)P(M|A)+P(B)P(M|B).",
         "P(M)=0,6*0,02+0,4*0,05.",
         "P(M)=0,032.",
-        "La probabilité est donc 3,2%."
+        "Donc P(M)=3,2%."
       ]
     },
     {
-      "id": "s2_maths_ex_014",
+      "id": "s2_maths_ex_017",
       "subjectId": "MATHS",
       "title": "Loi binomiale",
       "chapter": "Probabilités",
       "difficulty": "Moyen",
-      "statement": "Une épreuve est répétée 5 fois indépendamment avec une probabilité de succès p=0,4. X désigne le nombre de succès.",
+      "statement": "Une épreuve est répétée 5 fois indépendamment avec une probabilité de succès p=0,4. X est le nombre de succès.",
       "questions": [
         {
-          "id": "s2_maths_q_017",
+          "id": "s2_maths_q_020",
           "question": "Quelle est la loi de X ?",
           "options": [
             "B(5;0,4)",
@@ -877,8 +1178,8 @@
           "explanation": "X compte les succès lors de 5 épreuves indépendantes de probabilité 0,4."
         },
         {
-          "id": "s2_maths_q_018",
-          "question": "Quelle est l'espérance de X ?",
+          "id": "s2_maths_q_021",
+          "question": "Quelle est E(X) ?",
           "options": [
             "1",
             "2",
@@ -890,21 +1191,21 @@
         }
       ],
       "solutionSteps": [
-        "X suit une loi binomiale B(5;0,4).",
+        "X suit B(5;0,4).",
         "E(X)=np.",
         "E(X)=5*0,4=2."
       ]
     },
     {
-      "id": "s2_maths_ex_015",
+      "id": "s2_maths_ex_018",
       "subjectId": "MATHS",
       "title": "Régression linéaire",
       "chapter": "Statistiques",
       "difficulty": "Difficile",
-      "statement": "Pour une série double, on connaît x_barre=10, y_barre=25, V(X)=4 et cov(X,Y)=6. Déterminer l'équation de la droite de régression de Y en X.",
+      "statement": "On connaît x_barre=10, y_barre=25, V(X)=4 et cov(X,Y)=6. Déterminer la droite de régression de Y en X.",
       "questions": [
         {
-          "id": "s2_maths_q_019",
+          "id": "s2_maths_q_022",
           "question": "Quel est le coefficient directeur ?",
           "options": [
             "1",
@@ -916,35 +1217,34 @@
           "explanation": "a=cov(X,Y)/V(X)=6/4=1,5."
         },
         {
-          "id": "s2_maths_q_020",
-          "question": "Quelle est l'équation de la droite ?",
+          "id": "s2_maths_q_023",
+          "question": "Quelle est l'équation ?",
           "options": [
             "y=1,5x+10",
             "y=1,5x+5",
             "y=2x+5",
             "y=6x+4"
           ],
-          "correctIndex": 1,
-          "explanation": "b=y_barre-a x_barre=25-1,5*10=10. Correction : l'équation est y=1,5x+10."
+          "correctIndex": 0,
+          "explanation": "b=25-1,5*10=10. Donc y=1,5x+10."
         }
       ],
       "solutionSteps": [
-        "a=cov(X,Y)/V(X)=6/4=1,5.",
-        "b=y_barre-a x_barre=25-1,5*10=10.",
-        "La droite de régression est donc y=1,5x+10.",
-        "Le point moyen (10,25) appartient bien à cette droite."
+        "a=6/4=1,5.",
+        "b=25-1,5*10=10.",
+        "Donc la droite de régression est y=1,5x+10."
       ]
     },
     {
-      "id": "s2_maths_ex_016",
+      "id": "s2_maths_ex_019",
       "subjectId": "MATHS",
-      "title": "Corrélation linéaire",
+      "title": "Coefficient de corrélation",
       "chapter": "Statistiques",
       "difficulty": "Moyen",
-      "statement": "On considère une série pour laquelle cov(X,Y)=6, sigma_X=2 et sigma_Y=3. Calculer le coefficient de corrélation linéaire.",
+      "statement": "On connaît cov(X,Y)=6, sigma_X=2 et sigma_Y=3. Calculer le coefficient de corrélation.",
       "questions": [
         {
-          "id": "s2_maths_q_021",
+          "id": "s2_maths_q_024",
           "question": "Quelle est la valeur de r ?",
           "options": [
             "0,5",
@@ -952,15 +1252,15 @@
             "2",
             "9"
           ],
-          "correctIndex": 0,
-          "explanation": "r=cov(X,Y)/(sigma_X sigma_Y)=6/(2*3)=1. Correction : la valeur exacte est 1."
+          "correctIndex": 1,
+          "explanation": "r=6/(2*3)=1."
         }
       ],
       "solutionSteps": [
         "r=cov(X,Y)/(sigma_X sigma_Y).",
         "r=6/(2*3).",
         "r=1.",
-        "La liaison linéaire est parfaitement positive dans ce modèle."
+        "La corrélation linéaire est parfaitement positive dans cette série."
       ]
     }
   ]
