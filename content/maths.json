@@ -735,6 +735,400 @@
         "T_3 : y=2(x-3)-8.",
         "Donc y=2x-14."
       ]
+    },
+    {
+  "id": "maths_ex_015",
+  "subjectId": "MATHS",
+  "title": "Suite numérique",
+  "chapter": "Suites numériques",
+  "difficulty": "Facile",
+  "statement": "On considère la suite définie par u_n=2n+3. Calculer u_0, u_1 et u_5.",
+  "questions": [
+    {
+      "id": "maths_q_015",
+      "question": "Quelle est la valeur de u_0 ?",
+      "options": ["2", "3", "5", "6"],
+      "correctIndex": 1,
+      "explanation": "u_0=2×0+3=3."
+    },
+    {
+      "id": "maths_q_016",
+      "question": "Quelle est la valeur de u_5 ?",
+      "options": ["10", "11", "12", "13"],
+      "correctIndex": 3,
+      "explanation": "u_5=2×5+3=13."
     }
+  ],
+  "solutionSteps": [
+    "Utiliser la formule u_n=2n+3.",
+    "Pour n=0 : u_0=3.",
+    "Pour n=5 : u_5=13."
+  ]
+},
+{
+  "id": "maths_ex_016",
+  "subjectId": "MATHS",
+  "title": "Suite arithmétique",
+  "chapter": "Suites numériques",
+  "difficulty": "Facile",
+  "statement": "Une suite arithmétique vérifie u_0=4 et possède pour raison r=3. Calculer u_5.",
+  "questions": [
+    {
+      "id": "maths_q_017",
+      "question": "Quelle formule permet de calculer u_n ?",
+      "options": [
+        "u_n=u_0+n×r",
+        "u_n=u_0×r^n",
+        "u_n=u_0-r",
+        "u_n=n+r"
+      ],
+      "correctIndex": 0,
+      "explanation": "Pour une suite arithmétique, u_n=u_0+n×r."
+    },
+    {
+      "id": "maths_q_018",
+      "question": "Quelle est la valeur de u_5 ?",
+      "options": ["15", "17", "19", "20"],
+      "correctIndex": 2,
+      "explanation": "u_5=4+5×3=19."
+    }
+  ],
+  "solutionSteps": [
+    "Identifier u_0=4 et r=3.",
+    "Utiliser u_n=u_0+n×r.",
+    "Calculer u_5=4+5×3=19."
+  ]
+},
+{
+  "id": "maths_ex_017",
+  "subjectId": "MATHS",
+  "title": "Suite géométrique",
+  "chapter": "Suites numériques",
+  "difficulty": "Facile",
+  "statement": "Une suite géométrique vérifie u_0=2 et q=3. Calculer u_4.",
+  "questions": [
+    {
+      "id": "maths_q_019",
+      "question": "Quelle formule utilise-t-on pour une suite géométrique ?",
+      "options": [
+        "u_n=u_0+n×q",
+        "u_n=u_0×q^n",
+        "u_n=u_0-q",
+        "u_n=n×q"
+      ],
+      "correctIndex": 1,
+      "explanation": "Pour une suite géométrique, u_n=u_0×q^n."
+    },
+    {
+      "id": "maths_q_020",
+      "question": "Quelle est la valeur de u_4 ?",
+      "options": ["24", "54", "81", "162"],
+      "correctIndex": 3,
+      "explanation": "u_4=2×3^4=2×81=162."
+    }
+  ],
+  "solutionSteps": [
+    "Identifier u_0=2 et q=3.",
+    "Utiliser u_n=u_0×q^n.",
+    "Calculer u_4=2×3^4.",
+    "Donc u_4=162."
+  ]
+},
+{
+  "id": "maths_ex_018",
+  "subjectId": "MATHS",
+  "title": "Raisonnement par récurrence",
+  "chapter": "Suites numériques",
+  "difficulty": "Moyen",
+  "statement": "On souhaite démontrer par récurrence que 1+2+...+n=n(n+1)/2 pour tout entier n≥1.",
+  "questions": [
+    {
+      "id": "maths_q_021",
+      "question": "Quelle est la première étape d'une démonstration par récurrence ?",
+      "options": [
+        "La conclusion",
+        "L'initialisation",
+        "Le calcul de la dérivée",
+        "Le tableau de signes"
+      ],
+      "correctIndex": 1,
+      "explanation": "On commence par vérifier la propriété au premier rang."
+    },
+    {
+      "id": "maths_q_022",
+      "question": "Que doit-on démontrer pendant l'hérédité ?",
+      "options": [
+        "P(n) implique P(n+1)",
+        "P(n)=0",
+        "n=0",
+        "P(n) est fausse"
+      ],
+      "correctIndex": 0,
+      "explanation": "L'hérédité consiste à montrer que P(n) vraie entraîne P(n+1) vraie."
+    }
+  ],
+  "solutionSteps": [
+    "Vérifier la propriété au rang initial.",
+    "Supposer P(n) vraie.",
+    "Démontrer P(n+1).",
+    "Conclure par récurrence."
+  ]
+},
+{
+  "id": "maths_ex_019",
+  "subjectId": "MATHS",
+  "title": "Probabilité simple",
+  "chapter": "Probabilités",
+  "difficulty": "Facile",
+  "statement": "Une urne contient 3 boules rouges et 2 boules bleues. On tire une boule au hasard.",
+  "questions": [
+    {
+      "id": "maths_q_023",
+      "question": "Quelle est la probabilité de tirer une boule rouge ?",
+      "options": ["2/5", "3/5", "1/2", "3/2"],
+      "correctIndex": 1,
+      "explanation": "Il y a 3 boules rouges sur 5 boules au total, donc P(R)=3/5."
+    },
+    {
+      "id": "maths_q_024",
+      "question": "Quelle est la probabilité de tirer une boule bleue ?",
+      "options": ["1/5", "2/5", "3/5", "4/5"],
+      "correctIndex": 1,
+      "explanation": "Il y a 2 boules bleues sur 5 boules au total, donc P(B)=2/5."
+    }
+  ],
+  "solutionSteps": [
+    "Compter le nombre total de boules : 5.",
+    "Pour une boule rouge : 3 cas favorables.",
+    "P(R)=3/5.",
+    "Pour une boule bleue : P(B)=2/5."
+  ]
+},
+{
+  "id": "maths_ex_020",
+  "subjectId": "MATHS",
+  "title": "Probabilité conditionnelle",
+  "chapter": "Probabilités",
+  "difficulty": "Moyen",
+  "statement": "Dans une classe, 60% des élèves sont des filles. Parmi les filles, 70% ont réussi un examen.",
+  "questions": [
+    {
+      "id": "maths_q_025",
+      "question": "Quelle est la probabilité qu'un élève soit une fille ayant réussi ?",
+      "options": ["0,30", "0,42", "0,60", "0,70"],
+      "correctIndex": 1,
+      "explanation": "P(F et R)=P(F)×P(R|F)=0,60×0,70=0,42."
+    }
+  ],
+  "solutionSteps": [
+    "Identifier P(F)=0,60.",
+    "Identifier P(R|F)=0,70.",
+    "Calculer 0,60×0,70.",
+    "Obtenir 0,42."
+  ]
+},
+{
+  "id": "maths_ex_021",
+  "subjectId": "MATHS",
+  "title": "Variable aléatoire et espérance",
+  "chapter": "Probabilités",
+  "difficulty": "Moyen",
+  "statement": "Une variable aléatoire X prend les valeurs 0, 1 et 2 avec les probabilités 0,2 ; 0,5 et 0,3.",
+  "questions": [
+    {
+      "id": "maths_q_026",
+      "question": "Quelle est l'espérance de X ?",
+      "options": ["0,8", "1", "1,1", "1,5"],
+      "correctIndex": 2,
+      "explanation": "E(X)=0×0,2+1×0,5+2×0,3=1,1."
+    }
+  ],
+  "solutionSteps": [
+    "Multiplier chaque valeur par sa probabilité.",
+    "0×0,2=0.",
+    "1×0,5=0,5.",
+    "2×0,3=0,6.",
+    "Additionner : E(X)=1,1."
+  ]
+},
+{
+  "id": "maths_ex_022",
+  "subjectId": "MATHS",
+  "title": "Loi binomiale",
+  "chapter": "Probabilités",
+  "difficulty": "Moyen",
+  "statement": "On effectue 5 lancers indépendants d'une pièce équilibrée. X désigne le nombre de faces obtenues.",
+  "questions": [
+    {
+      "id": "maths_q_027",
+      "question": "Quelle est la loi de X ?",
+      "options": ["B(5;0,5)", "B(0,5;5)", "B(5;2)", "B(2;5)"],
+      "correctIndex": 0,
+      "explanation": "Il y a 5 répétitions et la probabilité d'un succès est 0,5."
+    },
+    {
+      "id": "maths_q_028",
+      "question": "Quelle est l'espérance de X ?",
+      "options": ["1", "2", "2,5", "5"],
+      "correctIndex": 2,
+      "explanation": "E(X)=n×p=5×0,5=2,5."
+    }
+  ],
+  "solutionSteps": [
+    "Identifier n=5.",
+    "Identifier p=0,5.",
+    "Donc X suit B(5;0,5).",
+    "Calculer E(X)=2,5."
+  ]
+},
+{
+  "id": "maths_ex_023",
+  "subjectId": "MATHS",
+  "title": "Nombre complexe",
+  "chapter": "Nombres complexes",
+  "difficulty": "Facile",
+  "statement": "On considère z=3+2i.",
+  "questions": [
+    {
+      "id": "maths_q_029",
+      "question": "Quelle est la partie réelle de z ?",
+      "options": ["2", "3", "5", "-2"],
+      "correctIndex": 1,
+      "explanation": "Dans z=3+2i, la partie réelle est 3."
+    },
+    {
+      "id": "maths_q_030",
+      "question": "Quelle est la partie imaginaire de z ?",
+      "options": ["3", "2", "-2", "5"],
+      "correctIndex": 1,
+      "explanation": "La partie imaginaire est 2."
+    }
+  ],
+  "solutionSteps": [
+    "Identifier z=a+ib.",
+    "On a a=3 et b=2.",
+    "Donc Re(z)=3 et Im(z)=2."
+  ]
+},
+{
+  "id": "maths_ex_024",
+  "subjectId": "MATHS",
+  "title": "Calcul dans C",
+  "chapter": "Nombres complexes",
+  "difficulty": "Moyen",
+  "statement": "Calculer (2+i)(3+2i).",
+  "questions": [
+    {
+      "id": "maths_q_031",
+      "question": "Quel est le résultat ?",
+      "options": ["4+7i", "6+5i", "4+5i", "8+7i"],
+      "correctIndex": 0,
+      "explanation": "(2+i)(3+2i)=6+4i+3i+2i²=6+7i-2=4+7i."
+    }
+  ],
+  "solutionSteps": [
+    "Développer le produit.",
+    "Utiliser i²=-1.",
+    "Regrouper les parties réelle et imaginaire.",
+    "Obtenir 4+7i."
+  ]
+},
+{
+  "id": "maths_ex_025",
+  "subjectId": "MATHS",
+  "title": "Module et conjugué",
+  "chapter": "Nombres complexes",
+  "difficulty": "Facile",
+  "statement": "On considère z=3+4i.",
+  "questions": [
+    {
+      "id": "maths_q_032",
+      "question": "Quel est le conjugué de z ?",
+      "options": ["3+4i", "3-4i", "-3+4i", "-3-4i"],
+      "correctIndex": 1,
+      "explanation": "Le conjugué est 3-4i."
+    },
+    {
+      "id": "maths_q_033",
+      "question": "Quel est le module de z ?",
+      "options": ["3", "4", "5", "7"],
+      "correctIndex": 2,
+      "explanation": "|z|=racine de (3²+4²)=5."
+    }
+  ],
+  "solutionSteps": [
+    "Changer le signe de la partie imaginaire pour obtenir le conjugué.",
+    "Calculer |z|=racine de (3²+4²).",
+    "Obtenir |z|=5."
+  ]
+},
+{
+  "id": "maths_ex_026",
+  "subjectId": "MATHS",
+  "title": "Équation dans C",
+  "chapter": "Nombres complexes",
+  "difficulty": "Moyen",
+  "statement": "Résoudre dans C l'équation x²+1=0.",
+  "questions": [
+    {
+      "id": "maths_q_034",
+      "question": "Quelles sont les solutions ?",
+      "options": ["x=1 et x=-1", "x=i et x=-i", "x=0", "Aucune solution"],
+      "correctIndex": 1,
+      "explanation": "x²=-1 et i²=-1, donc x=i ou x=-i."
+    }
+  ],
+  "solutionSteps": [
+    "Écrire x²=-1.",
+    "Utiliser i²=-1.",
+    "Les solutions sont x=i et x=-i."
+  ]
+},
+{
+  "id": "maths_ex_027",
+  "subjectId": "MATHS",
+  "title": "Géométrie analytique",
+  "chapter": "Géométrie analytique",
+  "difficulty": "Facile",
+  "statement": "On considère A(1,2) et B(4,6). Déterminer les coordonnées du vecteur AB.",
+  "questions": [
+    {
+      "id": "maths_q_035",
+      "question": "Quelles sont les coordonnées de AB ?",
+      "options": ["(3,4)", "(5,8)", "(-3,-4)", "(4,3)"],
+      "correctIndex": 0,
+      "explanation": "AB=(4-1,6-2)=(3,4)."
+    }
+  ],
+  "solutionSteps": [
+    "Calculer x_B-x_A=4-1=3.",
+    "Calculer y_B-y_A=6-2=4.",
+    "Donc AB=(3,4)."
+  ]
+},
+{
+  "id": "maths_ex_028",
+  "subjectId": "MATHS",
+  "title": "Vecteurs et alignement",
+  "chapter": "Géométrie analytique",
+  "difficulty": "Moyen",
+  "statement": "On considère A(0,0), B(2,4) et C(3,6). Déterminer si les trois points sont alignés.",
+  "questions": [
+    {
+      "id": "maths_q_036",
+      "question": "Les points A, B et C sont-ils alignés ?",
+      "options": ["Oui", "Non", "Impossible à déterminer", "Seulement A et B"],
+      "correctIndex": 0,
+      "explanation": "AB=(2,4) et AC=(3,6). On a 2×6-4×3=0, donc les vecteurs sont colinéaires."
+    }
+  ],
+  "solutionSteps": [
+    "Calculer AB=(2,4).",
+    "Calculer AC=(3,6).",
+    "Calculer 2×6-4×3=0.",
+    "Les vecteurs sont colinéaires.",
+    "Donc A, B et C sont alignés."
+  ]
+}
   ]
 }
