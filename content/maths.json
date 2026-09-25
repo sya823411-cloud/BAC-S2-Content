@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "subjectId": "MATHS",
 
   "lessons": [
@@ -745,7 +745,7 @@
   "statement": "On considère la suite définie par u_n=2n+3. Calculer u_0, u_1 et u_5.",
   "questions": [
     {
-      "id": "maths_q_015",
+      "id": "maths_q_037",
       "question": "Quelle est la valeur de u_0 ?",
       "options": ["2", "3", "5", "6"],
       "correctIndex": 1,
